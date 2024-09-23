@@ -83,3 +83,8 @@
   .boton{
     margin-left: -100px;
   }
+  /* @media screen and (max-width: 1342px) {
+    .header{
+      display: none;
+    }
+  } */

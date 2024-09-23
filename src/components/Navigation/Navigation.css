@@ -206,9 +206,12 @@
     justify-content: center;
     align-items: center;
   }
+  .mobile-view{
+    display: none;
+  }
   
   /* Ajustes para la visualización en pantallas pequeñas */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .navigation-content {
       flex-direction: column;
     }
@@ -226,4 +229,45 @@
       margin-top: 10px;
     }
   }
+   */
+   @media screen and (max-width: 1342px) {
+    .header {
+      padding: 10px 5px; /* Ajustar el padding para móviles */
+    }
   
+    .desktop-view {
+      display: none; /* Ocultar vista de escritorio en móviles */
+    }
+  
+    .mobile-view {
+      display: flex; /* Mostrar vista móvil */
+      flex-direction: column; /* Apilar elementos verticalmente */
+      width: 100%; /* Asegurarse de que ocupe todo el ancho */
+      padding: 10px; /* Espaciado alrededor del contenido */
+      background-color: #f8f8f8; /* Fondo claro para la vista móvil */
+    }
+  
+    .nav-menu-item {
+      margin: 10px 0; /* Espaciado entre los elementos del menú */
+      text-align: center; /* Centrar el texto de los enlaces */
+    }
+  
+    .nav-menu-item img {
+      width: 24px; /* Ajustar el tamaño de las imágenes en móviles */
+      height: auto; /* Mantener proporciones */
+    }
+  
+    .btn_cart {
+      margin-top: 10px; /* Espacio superior para el botón del carrito */
+      padding: 10px; /* Espaciado interno */
+    }
+  
+    .text_recojo {
+      font-size: 12px; /* Ajustar el tamaño del texto en móviles */
+    }
+  
+    .icono-tienda, .icono-persona, .icono-v {
+      width: 25px; /* Ajustar iconos para móviles */
+      height: auto; /* Mantener proporciones */
+    }
+  }

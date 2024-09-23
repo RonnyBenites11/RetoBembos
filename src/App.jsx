@@ -9,13 +9,9 @@ import Carrusel from './components/Carrusel';
 const App = () => {
   return (
     <div className="app">
-      <div className='fix'>
-      <div>
-      <Header />
-      </div>
-      <div>
+      <div className='fix'>    
+      <Header />  
       <Navigation/>
-      </div>
       </div>
       <Carrusel/>
      
