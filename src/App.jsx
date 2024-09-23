@@ -1,4 +1,3 @@
-
 /*import { useState } from 'react';*/
 import './App.css';
 import { ContainerProducts } from './components/ContainerProducts/ContainerProducts';
@@ -6,6 +5,11 @@ import { ContainerProducts } from './components/ContainerProducts/ContainerProdu
 export const App = () => {
   return (
     <div>
+      <div className='fix'>    
+      <Header />  
+      <Navigation/>
+      </div>
+      <Carrusel/>
       <ContainerProducts sectionName={'promocion'} />
       <ContainerProducts sectionName={'menu'} />
     </div>
