@@ -1,0 +1,45 @@
+.products-container {
+  /*border: 1px solid red;*/
+  padding: 1rem 0;
+}
+
+.products-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-title h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.46rem;
+  font-size: 3.3rem;
+  font-weight: 400;
+}
+
+.products-icon img {
+  cursor: pointer;
+}
+
+.products-icon img:first-child {
+  margin-right: 1.3rem;
+}
+
+.section-container {
+  padding-top: 4rem;
+}
+
+/*.container-promocion {
+  padding-top: 4rem;
+}
+
+.container-menu {
+  padding-bottom: 1rem;
+}*/
+
+/*.products-swiper {
+  border: 1px solid black;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5rem;
+  overflow: hidden;
+}*/

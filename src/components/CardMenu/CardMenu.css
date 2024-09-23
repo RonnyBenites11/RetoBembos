@@ -1,0 +1,31 @@
+.card-img {
+  height: 24.2rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+/*.card-img img {
+}*/
+
+.card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+  padding-bottom: 0.7rem;
+  border-radius: 2rem;
+}
+
+.card-name {
+  font-weight: normal;
+}
+
+.card-btn {
+  text-transform: uppercase;
+}
+
+.card-menu-container {
+  /*border: 1px solid black;*/
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5.8rem;
+  overflow: hidden;
+}

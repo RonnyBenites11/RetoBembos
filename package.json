@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
+=======
     "react-icons": "^5.3.0",
+>>>>>>> c5b8febb6ab0324fabe3799c7a7ce3723db76fc3
     "react-slick": "^0.30.2",
     "retobembos": "file:",
     "slick-carousel": "^1.8.1"
