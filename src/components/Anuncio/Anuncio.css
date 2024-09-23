@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .Anuncios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .Anuncios img {
+    border: 2.5px solid blue;
+    max-width: 420px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: blue;
+  }
+  
+  .social-box {
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid blue;
+    width: 865px;
+  }
+  
+  .social-media {
+    background-color: #ffc107;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    width: 25%;
+  }
+  
+  .bembos-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 60%;
+  }
+  
+  .bembos-details {
+    font-size: 18px;
+  }
+  
+  .social-buttons a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .twitter-button img,
+  .facebook-button img {
+    max-width: 110px;
+    border-radius: 5px;
+  }
+  

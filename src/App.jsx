@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*import { useState } from 'react';*/
 import './App.css';
 import { ContainerProducts } from './components/ContainerProducts/ContainerProducts';
@@ -11,13 +11,14 @@ export const App = () => {
     </div>
   );
 };
-=======
+
 import React from 'react';
 import Header from './components/Header';
 import './App.css';
 import Navigation from './components/Navigation';
 import Carrusel from './components/Carrusel';
-
+import Anuncio from './components/Anuncio';
+  
 
 
 const App = () => {
@@ -32,11 +33,13 @@ const App = () => {
       </div>
       </div>
       <Carrusel/>
-     
+      <div>
+      <Anuncio/>
+      </div>
       
     </div>
   );
 };
 
 export default App;
->>>>>>> c5b8febb6ab0324fabe3799c7a7ce3723db76fc3
+
