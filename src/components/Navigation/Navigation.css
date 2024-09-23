@@ -1,0 +1,229 @@
+.navigation-container {
+  background-color: #fff;
+  box-shadow: 0 5px 6px -3px rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 110px; /* Ajusta la posición justo debajo del Header */
+  width: 100%;
+  z-index: 5;
+  height: 69px;
+  max-height: 69px;
+}
+  
+  .navigation-content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 100%;
+   
+    
+  }
+  
+  /* Menú de navegación */
+  .navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 74px 0 0;
+    flex: 1;
+    margin-left: 300px;
+  }
+  
+  .nav-menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+   
+  }
+  
+  .nav-menu-item a{
+    color: #243986;
+    display: flex; /* Hace que el contenido se alinee en línea */  
+    align-items: center; /* Centra verticalmente el texto con la imagen */
+    text-decoration: none; 
+    
+  }
+  
+  .nav-menu-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del enlace */
+    height: 0; /* Comienza con altura 0 */
+    background-color: #e53935; /* Color rojo */
+    transition: height 0.3s ease; /* Animación suave */
+    z-index: -1; /* Para que no cubra el texto o icono */
+  }
+  
+  .nav-menu-item a:hover::after {
+    height: 2px;
+    margin-top: 10px; /* La línea crece hacia arriba al hacer hover */
+  }
+  
+  .nav-menu-item img {
+    margin-right: 1px;
+    width: 20px; /* Separación entre el ícono y el texto */
+  }
+  
+  /* Submenú de Promociones */
+  .nav-menu-item.hasSubs {
+    position: relative;
+  } 
+  
+  .hoversubs {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, .25);
+       padding: 0px;
+      
+        
+        top: 99%;
+        list-style: none;
+        -webkit-animation-name: fadeInOpacity-data-v-1a0fdd4b;
+        animation-name: fadeInOpacity-data-v-1a0fdd4b;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-duration: .15s;
+        animation-duration: .15s;
+    
+  }
+  .hoversubs li a {
+    color: #243986;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 5px 2px;
+    display: block;
+    width: 150px;
+    
+}
+.nav-menu-item:hover .hoversubs {
+    display: block;
+  }
+  
+  /* Estilo de cada elemento del submenú */
+  .hoversubs li {
+    border-bottom: 1px solid #173083; /* Línea azul entre opciones */
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Elimina la línea azul del último elemento del submenú */
+  .hoversubs li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Estilo de los enlaces dentro del submenú */
+  
+  /* Cambia el color de fondo y el color del texto al pasar el ratón por encima de una opción */
+  .hoversubs li:hover {
+    background-color: #173083;
+    border-radius: 20px; /* Fondo azul */
+  }
+  
+  .hoversubs li:hover a {
+    color: #fbb905; /* Texto amarillo */
+  }
+  .nav-menu-item.hasSubs:hover .hoversubs {
+    display: block; /* Mostrar el submenú al pasar el ratón */
+  }
+  
+  .hoversubs li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+ 
+  
+  /* Estilos para el contenedor del carrito */
+  .navigation-cart {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 150px;
+  }
+  .navigation-cart button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    background: #fbb905 ;
+    border-radius: 25px;
+    font-family: din1451;
+    color: #373d42;
+    font-size: 30px;
+    border: none;
+    outline: 0;
+    padding: 6px 20px;
+  }
+  .navigation-cart button .btn_recojo{
+    width: 179px;
+    margin-right: 13px;
+  }
+  
+  
+  
+  .btn_recojo svg {
+    margin-right: -30px;
+  }
+  
+  .text_recojo {
+    font-size: 12px;
+    font-weight: bold;
+    color: #21388b;
+  }
+  
+  .text_recojo strong {
+    color: #e53935; /* Color rojo para "SIN COLAS" */
+  }
+  
+  /* Estilos para el botón del carrito */
+  .navigation-cart button {
+ 
+   
+ 
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  
+  .navigation-cart p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ajustes para la visualización en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navigation-content {
+      flex-direction: column;
+    }
+  
+    .navigation-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .nav-menu-item {
+      margin-bottom: 10px;
+    }
+  
+    .navigation-cart {
+      margin-top: 10px;
+    }
+  }
+  
