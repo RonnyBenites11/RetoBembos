@@ -1,0 +1,47 @@
+.carousel-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: 100px;
+}
+
+.carousel-container .slick-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Customize the dots */
+.carousel-container .slick-dots {
+  bottom: 20px;
+}
+
+.carousel-container .slick-dots li button:before {
+  font-size: 12px;
+  color: #000e3bf1 ;
+}
+
+.carousel-container .slick-dots li.slick-active button:before {
+  color: white; /* Yellow color for active dot */
+}
+
+/* Customize the arrows */
+.carousel-container .slick-prev,
+.carousel-container .slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-container .slick-prev {
+  left: 20px;
+}
+
+.carousel-container .slick-next {
+  right: 20px;
+}
+
+.carousel-container .slick-prev:before,
+.carousel-container .slick-next:before {
+  font-size: 40px;
+}

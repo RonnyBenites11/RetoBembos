@@ -1,0 +1,85 @@
+.header {
+    max-height: 76px;
+    height: 76px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+   
+    box-shadow: none;
+  }
+  .delivery-info {
+    background-color: #000;
+    text-align: center;
+    font-size: 12px;
+    
+  }
+  .delivery-info img{
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  .main-header {
+    padding: 30px;
+    display: flex;
+    background-color: #173083;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+   
+  }
+ 
+  .logo {
+    margin-left: 140px;
+    width: 30%;
+    height:40px;
+    
+    
+  }
+  .logo img{
+    margin-top: -20px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .main-top-center{
+    width: 10%;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-right: 150px;
+  }
+
+  .phone {
+    color: #ffd700;
+    
+  }
+  .direccion{
+    color: white;
+  }
+  .svg-telefono{
+    width: 50px;
+    height: 25px;
+  }
+  .icono-v{
+    width: 8px;
+
+  }
+  
+  
+  .login-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 350px;
+    margin-top: -20px;
+  }
+  .icono-persona{
+    margin:20px 2px 0px 10px;
+    width: 15px;
+  }
+  .boton{
+    margin-left: -100px;
+  }
