@@ -22,7 +22,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Carrusel from './components/Carrusel';
 import Anuncio from './components/Anuncio';
-  
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -40,6 +40,7 @@ const App = () => {
       <div>
       <Anuncio/>
       </div>
+      <Footer/>
       
     </div>
   );
