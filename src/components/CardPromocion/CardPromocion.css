@@ -1,0 +1,96 @@
+.card-promo-container {
+  /*border-radius: 2rem;*/
+  /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+  padding-bottom: 0.7rem;*/
+  /*position: relative;*/
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5.8rem;
+  overflow: hidden;
+}
+
+.card-img {
+  height: 30rem;
+  width: 23.7rem;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card-img img:hover {
+  transform: scale(1.1);
+}
+
+.card-desc {
+  font-size: 1.7rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #d50e0e;
+  padding: 0.8rem 1.7rem;
+}
+
+.card-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.card-name {
+  font-size: 2.3rem;
+}
+
+.card-prices {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.card-price-promo {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.card-price-real {
+  font-size: 2rem;
+  color: #ec0b0b;
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.card-btn {
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #193694;
+  border-radius: 2.5rem;
+  padding: 1rem 7.5rem;
+  margin-top: 0.7rem;
+}
+
+.container {
+  position: relative;
+  width: 23.7rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+  border-radius: 2rem;
+  padding-bottom: 0.7rem;
+}
