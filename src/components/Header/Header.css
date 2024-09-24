@@ -57,10 +57,12 @@
   }
   .direccion{
     color: white;
+    margin-left: 5px;
   }
   .svg-telefono{
     width: 50px;
     height: 25px;
+    color: white;
   }
   .icono-v{
     width: 8px;
