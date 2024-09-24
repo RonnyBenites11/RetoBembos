@@ -1,69 +1,85 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.banner img {
+  border: 2.5px solid blue;
+  max-width: 420px;
+}
+
+.contentWrapper {
+  box-sizing: border-box;
+  margin: 50px auto;
+  max-width: 1134px;
+  width: 100%;
+  padding: 0 13px;
+  background-color: rgb(246, 247, 248);
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
   
-  img {
-    border-radius: 20px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .Anuncios {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .Anuncios img {
-    border: 2.5px solid blue;
-    max-width: 420px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: blue;
-  }
-  
-  .social-box {
-    display: flex;
-    border-radius: 10px;
-    border: 2px solid blue;
-    width: 865px;
-  }
-  
-  .social-media {
-    background-color: #ffc107;
-    padding: 10px;
-    border-radius: 10px 0 0 10px;
-    width: 25%;
-  }
-  
-  .bembos-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    width: 60%;
-  }
-  
-  .bembos-details {
-    font-size: 18px;
-  }
-  
-  .social-buttons a {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .twitter-button img,
-  .facebook-button img {
-    max-width: 110px;
-    border-radius: 5px;
-  }
-  
+  justify-content: center;
+}
+
+.infoCard {
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 10px;
+  border: 1px solid rgb(35, 56, 139);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+}
+
+.leftPanel {
+  width: 30%;
+  background-color: rgb(255, 181, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 51px;
+  color: rgb(35, 56, 139);
+  line-height: 50px;
+  padding-bottom: 18px;
+  font-weight: 200;
+}
+
+.shareLabel {
+  color: rgb(35, 56, 139);
+  font-size: 16px;
+}
+
+.socialButton {
+  margin-top: 5px;
+}
+
+.rightPanel {
+  width: 70%;
+  padding: 25px;
+  position: relative;
+}
+
+.facebookEmbed {
+  margin-top: 20px;
+  border: none;
+  overflow: hidden;
+}
