@@ -16,7 +16,7 @@ const App = () => {
         <Navigation />
       </div>
       <Carrusel />
-      {/*<Cart />*/}
+      {/*{<Cart />}*/}
       <ContainerProducts sectionName={'promocion'} />
       <ContainerProducts sectionName={'menu'} />
       <Anuncio />

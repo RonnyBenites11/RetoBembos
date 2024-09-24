@@ -4,38 +4,56 @@ import './Anuncio.css';
 const Anuncio = () => {
   return (
     <div>
-      <div className="Anuncios">
-        <a href="#"><img src="/src/assets/img/Cobertura.webp" alt="Cobertura" /></a>
-        <a href="#"><img src="/src/assets/img/Promos.webp" alt="Promos" /></a>
+      <div className="banner">
+        <a href="#">
+          <img src="/src/assets/img/Cobertura.webp" alt="Cobertura" />
+        </a>
+        <a href="#">
+          <img src="/src/assets/img/Promos.webp" alt="Promociones" />
+        </a>
       </div>
 
-      <div className="container">
-        <div className="social-box">
-          <div className="social-media">
-            <h2>SOCIAL BEMBOS</h2>
-            <p>Compartir en:</p>
-            <div className="social-buttons">
-              <a href="#" className="twitter-button">
-                <img src="/src/assets/img/twitter logo.png" alt="Twitter" />
-              </a>
-              <a href="#" className="facebook-button">
-                <img src="/src/assets/img/facebook logo.png" alt="Facebook" />
-              </a>
+      <section className="contentWrapper">
+        <div className="infoCard">
+          <div className="leftPanel">
+            <div className="heading">
+              SOCIAL <br />
+              BEMBOS
             </div>
-          </div>
+            <p className="shareLabel">Compartir en:</p>
 
-          <div className="bembos-info">
-            <div className="bembos-details">
-              <strong>BEMBOS</strong> <span>1,128,588 followers</span>
-            </div>
-            <div className="buttons">
-              <button>Follow Page</button>
-              <button>Share</button>
-            </div>
+            <a href="#">
+              <img src="/src/assets/img/twitter logo.png" width="145" height="32" alt="Twitter Bembos" loading="lazy" />
+            </a>
+
+            <a href="">
+              <img
+                src="/src/assets/img/facebook logo.png"
+                width="145"
+                height="32"
+                alt="Facebook Bembos"
+                loading="lazy"
+              />
+            </a>
           </div>
-        </div>
-      </div>
+          <div className="rightPanel">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbembos%2F&amp;tabs&amp;width=500&amp;height=130&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=true&amp;appId"
+              width="500"
+              height="130"
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen="allowfullscreen"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              className="facebookEmbed"
+            />
+          </div>
+          </div>
+          
+         
+    </section>
     </div>
+
   );
 };
 

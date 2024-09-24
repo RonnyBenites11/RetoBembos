@@ -9,6 +9,48 @@
   background-color: #e2e2e2;
 }
 
-.card-adress {
+.cart-adress {
   font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.cart-adress-title {
+  width: 65%;
+}
+
+.cart-adress-city {
+  display: block;
+}
+
+.cart-down-img {
+  width: 10%;
+}
+
+.cart-close {
+  background-color: #d90f06;
+}
+
+.cart-adress-title,
+.cart-adress-txt,
+.cart-adress-city {
+  font-family: 'kulturista';
+}
+
+.cart-adress-txt {
+  color: #a7a7a7;
+}
+
+.cart-adress-city {
+  text-transform: uppercase;
+}
+
+.cart-down-img {
+  width: 15px;
+  height: 20px;
+}
+
+.cart-close span {
+  font-size: 2.7rem;
 }

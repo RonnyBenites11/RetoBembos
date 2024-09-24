@@ -1,142 +1,154 @@
 footer {
-    background-color: rgb(20, 20, 130);
-    padding: 5px;
-    padding-top: 20px; 
-}
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 5px; 
+  background-color: #14148a;
+  padding: 20px 0;
 }
 
-.Icons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px;
+.footer-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+  color: #fff;
 }
 
-.Icons a {
-    text-decoration: none;
-    color: white;
-    margin: 5px; 
+.social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.Icons a i {
-    font-size: 30px; 
-    padding: 10px;
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-.footerNav {
-    flex: 1;
-    margin-top: 0; 
-    padding-top: 0; 
-}
-.footerNav ul {
-    padding: 0; 
-    margin: 0; 
+.social-icons img {
+  max-width: 50px;
 }
 
-.footerNav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px; 
+.footer-links {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
 }
 
-#bembos-logo {
-    width: 150px;
-    margin-top: 0; 
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.PayMethods {
-    flex: 1;
-    text-align: center;
-    margin-top: 10px; 
+.footer-links li {
+  margin-bottom: 8px;
 }
 
-.PayMethods p {
-    color: white;
-    margin-bottom: 5px; 
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-.PayMethods .payment-logo {
-    margin: 0 5px; 
-    max-width: 50px; 
-    display: inline-block;
+.footer-links a:hover {
+  color: #cccccc;
 }
 
-.PayMethods .logoSpay {
-    margin-top: 5px;
-    max-width: 100px; 
+#logo-bembos {
+  width: 140px;
+  margin-top: 0;
 }
 
-.PayMethods .btnComprobantes {
-    margin-top: 20px; 
-    background-color: #FFC107;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 12px;
+.payment-options {
+  flex: 1;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.form {
-    flex: 1;
-    text-align: right;
+.payment-options p {
+  color: #fff;
+  margin-bottom: 15px;
 }
 
-.form p {
-    color: white;
-    margin-bottom: 5px; 
+.payment-img {
+  display: block;
+  margin: 10px auto;
+  max-width: 60px;
 }
 
-.form input[type="text"] {
-    padding: 5px; 
-    border-radius: 5px;
-    margin-right: 5px;
-    font-size: 12px; 
+.safetypay-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100px;
 }
 
-.form button {
-    background-color: #FFC107;
-    padding: 5px 8px; 
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 12px; 
+.receipt-button {
+  margin-top: 30px;
+  background-color: #ffb300;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #000;
 }
 
-.checkbox-wrapper {
-    margin-top: 5px; 
+.newsletter {
+  flex: 1;
+  text-align: right;
+  margin-top: 10px;
 }
 
-.form input[type="checkbox"] {
-    margin-right: 5px;
+.newsletter p {
+  color: #fff;
+  margin-bottom: 8px;
 }
 
-.checkboxLabel {
-    color: white;
-    font-size: 12px; 
+.newsletter input[type='email'] {
+  padding: 8px;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  border: none;
 }
 
-.form .bookImage {
-    display: block;
-    margin-top: 5px;
-    max-width: 70px; 
+.newsletter button {
+  background-color: #ffb300;
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
 }
 
-.footerLogo {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+.terms-checkbox {
+  margin-top: 10px;
 }
 
-.footerBottom {
-    width: 100%;
-    text-align: center;
-    color: whitesmoke;
-    font-size: 10px; 
-    margin-top: 5px; 
+.newsletter input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+.terms-label {
+  color: #fff;
+  font-size: 12px;
+}
+
+.complaints-img {
+  display: block;
+  margin-top: 10px;
+  max-width: 90px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 12px;
+  border-top: 1px solid #fff;
+  padding: 10px 0;
+  margin-top: 20px;
 }
