@@ -7,6 +7,28 @@
   src: url(/public/fonts/din1451/Din1451-Regular.woff);
 }
 
+@font-face {
+  font-family: 'kulturista';
+  src: url(/public/fonts/kulturista/Kulturista-Regular.woff);
+}
+
+@font-face {
+  font-family: 'kulturista';
+  src: url(/public/fonts/kulturista/Kulturista-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'kulturista';
+  src: url(/public/fonts/kulturista/Kulturista-Semibold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'ChickenSans';
+  src: url(/public/fonts/chickenSans/ChickenSans-Regular.woff);
+}
+
 *,
 *::before,
 *::after {
