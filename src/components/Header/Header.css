@@ -15,7 +15,7 @@
   }
   .delivery-info img{
     height: 40px;
-    margin-top: 10px;
+    
   }
   
   .main-header {
@@ -81,6 +81,7 @@
   .icono-persona{
     margin:20px 2px 0px 10px;
     width: 15px;
+    display: inline-block;
   }
   .boton{
     margin-left: -100px;
