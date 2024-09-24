@@ -1,0 +1,142 @@
+footer {
+    background-color: rgb(20, 20, 130);
+    padding: 5px;
+    padding-top: 20px; 
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5px; 
+}
+
+.Icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.Icons a {
+    text-decoration: none;
+    color: white;
+    margin: 5px; 
+}
+
+.Icons a i {
+    font-size: 30px; 
+    padding: 10px;
+}
+
+.footerNav {
+    flex: 1;
+    margin-top: 0; 
+    padding-top: 0; 
+}
+.footerNav ul {
+    padding: 0; 
+    margin: 0; 
+}
+
+.footerNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; 
+}
+
+#bembos-logo {
+    width: 150px;
+    margin-top: 0; 
+}
+
+.PayMethods {
+    flex: 1;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.PayMethods p {
+    color: white;
+    margin-bottom: 5px; 
+}
+
+.PayMethods .payment-logo {
+    margin: 0 5px; 
+    max-width: 50px; 
+    display: inline-block;
+}
+
+.PayMethods .logoSpay {
+    margin-top: 5px;
+    max-width: 100px; 
+}
+
+.PayMethods .btnComprobantes {
+    margin-top: 20px; 
+    background-color: #FFC107;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.form {
+    flex: 1;
+    text-align: right;
+}
+
+.form p {
+    color: white;
+    margin-bottom: 5px; 
+}
+
+.form input[type="text"] {
+    padding: 5px; 
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px; 
+}
+
+.form button {
+    background-color: #FFC107;
+    padding: 5px 8px; 
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px; 
+}
+
+.checkbox-wrapper {
+    margin-top: 5px; 
+}
+
+.form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkboxLabel {
+    color: white;
+    font-size: 12px; 
+}
+
+.form .bookImage {
+    display: block;
+    margin-top: 5px;
+    max-width: 70px; 
+}
+
+.footerLogo {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footerBottom {
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 10px; 
+    margin-top: 5px; 
+}

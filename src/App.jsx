@@ -1,29 +1,26 @@
 import React from 'react';
+import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Carrusel from './components/Carrusel';
-/*import { useState } from 'react';*/
-import './App.css';
+import Anuncio from './components/Anuncio';
+import Footer from './components/Footer';
 import { ContainerProducts } from './components/ContainerProducts/ContainerProducts';
 
-export const App = () => {
+const App = () => {
   return (
-    <div>
-      <div className='fix'>    
-      <Header />  
-      <Navigation/>
+    <div className="app">
+      <div className='fix'>
+        <Header />
+        <Navigation/>
       </div>
-      <Carrusel/>
+      <Carrusel />
       <ContainerProducts sectionName={'promocion'} />
       <ContainerProducts sectionName={'menu'} />
+      <Anuncio />
+      <Footer />
     </div>
   );
 };
 
-
-
-
-
-
-
-
+export default App;
