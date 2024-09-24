@@ -15,6 +15,10 @@
   font-weight: 400;
 }
 
+.products-icon {
+  display: flex;
+}
+
 .products-icon img {
   cursor: pointer;
 }

@@ -93,4 +93,5 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
   border-radius: 2rem;
   padding-bottom: 0.7rem;
+  flex-direction: column;
 }
