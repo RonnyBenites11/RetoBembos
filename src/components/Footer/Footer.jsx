@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="newsletter">
           <p>¿Te gustaría recibir nuestras promociones?</p>
           <input type="email" placeholder="Tu Correo" />
-          <button>Suscribirse</button>
+          <button>Enviar</button>
           <div className="terms-checkbox">
             <input type="checkbox" id="accept-terms" />
             <label htmlFor="accept-terms" className="terms-label">
