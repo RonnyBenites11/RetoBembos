@@ -22,11 +22,11 @@ const Anuncio = () => {
             </div>
             <p className="shareLabel">Compartir en:</p>
 
-            <a href="#">
+            <a href="https://x.com/bembosoficial?lang=es" target='_blank'>
               <img src="/src/assets/img/twitter logo.png" width="145" height="32" alt="Twitter Bembos" loading="lazy" />
             </a>
 
-            <a href="">
+            <a href="https://www.facebook.com/bembos/" target='_blank'>
               <img
                 src="/src/assets/img/facebook logo.png"
                 width="145"

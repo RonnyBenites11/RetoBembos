@@ -6,19 +6,19 @@ const Footer = () => {
     <footer>
       <div className="footer-wrapper">
         <div className="social-icons">
-          <a href="#">
+          <a href="https://www.facebook.com/bembos/" target='_blank'>
             <img src="/src/assets/img/Facebook.svg" alt="" />
           </a>
 
-          <a href="#">
+          <a href="https://www.youtube.com/@BembosCanal/videos" target='_blank'>
             <img src="/src/assets/img/Youtube.svg" alt="" />
           </a>
 
-          <a href="#">
+          <a href="https://x.com/bembosoficial?lang=es" target='_blank'>
             <img src="/src/assets/img/Twitter.svg" alt="" />
           </a>
 
-          <a href="#">
+          <a href="https://www.instagram.com/bembosoficial/?hl=es" target='_blank'>
             <img src="/src/assets/img/Instagram.svg" alt="" />
           </a>
         </div>
