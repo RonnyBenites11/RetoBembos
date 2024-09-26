@@ -5,3 +5,4 @@ import './index.css';
 import Menu from './components/Menu/Menu.jsx';
 
 createRoot(document.getElementById('root')).render(<App />);
+/*createRoot(document.getElementById('root')).render(<Menu />);*/
