@@ -10,7 +10,6 @@
   object-fit: cover;
 }
 
-/* Customize the dots */
 .carousel-container .slick-dots {
   bottom: 20px;
 }
@@ -21,10 +20,9 @@
 }
 
 .carousel-container .slick-dots li.slick-active button:before {
-  color: white; /* Yellow color for active dot */
+  color: white; 
 }
 
-/* Customize the arrows */
 .carousel-container .slick-prev,
 .carousel-container .slick-next {
   z-index: 1;
