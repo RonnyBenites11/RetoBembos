@@ -1,6 +1,6 @@
 #menu-categories {
     position: fixed;
-    top: 30%; 
+    top: 220px; 
     left: 50%; 
     transform: translateX(-50%); 
     width: 90%; 
@@ -24,7 +24,7 @@
   
   #menu-categories.scrolled {
     width: 100%; 
-    top: 28%; 
+    top: 200px; 
     border-radius: 0; 
   }
   

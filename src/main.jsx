@@ -7,3 +7,4 @@ import Combos from './components/Combos/Combos.jsx';
 
 createRoot(document.getElementById('root')).render(<App />);
 /*createRoot(document.getElementById('root')).render(<Menu />);*/
+/*createRoot(document.getElementById('root')).render(<Combos />);*/

@@ -17,7 +17,7 @@
 }
 
 .banner img {
-  border: 1px solid rgb(35, 56, 139);
+  border: 1px solid #23388b;
   width: 100%;
   border-radius: 10px;
 }
@@ -104,4 +104,8 @@
   margin-top: 20px;
   border: none;
   overflow: hidden;
+}
+
+.span {
+  height: 1000px;
 }
