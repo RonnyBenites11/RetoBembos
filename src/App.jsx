@@ -11,10 +11,7 @@ import { Cart } from './components/Cart/Cart';
 const App = () => {
   return (
     <div className="app">
-      <div className="fix">
-        <Header />
-        <Navigation />
-      </div>
+      <Header className="fix" />
       <Carrusel />
       {/*{<Cart />}*/}
       <ContainerProducts sectionName={'promocion'} />

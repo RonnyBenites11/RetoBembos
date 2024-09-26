@@ -1,12 +1,26 @@
 .cart-container {
   position: fixed;
   right: 0;
-
   height: 100vh;
   width: 35%;
   top: 0;
   z-index: 20;
-  background-color: #e2e2e2;
+  overflow-y: auto;
+}
+
+.cart-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.cart-container::-webkit-scrollbar-thumb {
+  background-color: #1a317e;
+  border-radius: 4px;
+}
+
+.cart-container::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+  border-radius: 4px;
 }
 
 .cart-adress {
@@ -14,6 +28,7 @@
   display: flex;
   justify-content: space-around;
   padding: 2rem 0;
+  background-color: #e8e8e8;
 }
 
 .cart-adress-title {
@@ -29,12 +44,28 @@
 }
 
 .cart-close {
+  width: 30px;
+  height: 30px;
   background-color: #d90f06;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cart-close span {
+  color: #ffffff;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cart-adress-title,
 .cart-adress-txt,
-.cart-adress-city {
+.cart-adress-city,
+.cart-title,
+.cart-txt,
+.cart-txt span {
   font-family: 'kulturista';
 }
 
@@ -53,4 +84,277 @@
 
 .cart-close span {
   font-size: 2.7rem;
+}
+
+.cart-info {
+  background-color: #ffffff;
+}
+
+.cart-info-top {
+  padding: 0 4.5rem;
+}
+
+.cart-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.cart-txt {
+  font-size: 1.4rem;
+  color: #1a317e;
+  font-weight: 700;
+}
+
+.cart-txt span {
+  font-size: 1.2rem;
+  color: #464646;
+}
+
+.cart-product {
+  padding: 2rem 2.5rem 0;
+}
+
+.cart-product-row {
+  padding: 1rem 0 2rem 0;
+  border-top: 2px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-detail-img {
+  height: 60px;
+  width: 60px;
+}
+
+.cart-detail {
+  display: flex;
+}
+
+.cart-detail-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cart-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.2rem 1.3rem;
+}
+
+.cart-detail-product {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.cart-detail-price {
+  font-size: 2.4rem;
+}
+
+.cart-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.cart-btns-top {
+  display: flex;
+  gap: 3rem;
+}
+
+.icon-delete {
+  height: 20px;
+  width: 20px;
+}
+
+.icon-delete img {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-btns-top span {
+  color: #21388b;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-btns-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-minus,
+.cart-plus {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.cart-quantity {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.cart-subtotal,
+.cart-total {
+  border-top: 2px solid #ccc;
+  padding: 1rem 0 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-subtotal-txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-total {
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2.4rem;
+  padding-bottom: 1.5rem;
+}
+
+.cart-add-container {
+  border-top: 2px solid #ccc;
+  background-color: #e6e6e6;
+  padding-bottom: 14rem;
+}
+
+.cart-add-title {
+  text-align: center;
+  font-family: 'kulturista';
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 2.5rem 0;
+}
+
+.cart-add-slider {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 3rem 4rem 3rem;
+}
+
+.cart-add-product {
+  width: 21.8rem;
+  height: 31rem;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.cart-add-img {
+  height: 21rem;
+  width: 100%;
+}
+
+.cart-add-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.cart-add-detail {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.3rem;
+}
+
+.cart-add-txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-add-name,
+.cart-add-price {
+  font-size: 1.4rem;
+}
+
+.cart-add-btn {
+  border-radius: 20px;
+  font-family: 'kulturista';
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #21388b;
+  color: #21388b;
+  width: fit-content;
+  align-self: center;
+  background-color: transparent;
+  padding: 10px 20px;
+}
+
+.cart-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 1rem 3rem;
+  width: 35%;
+  border-top: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-footer-btn {
+  border-radius: 50px;
+  width: 100%;
+  font-family: 'kulturista';
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+
+.cart-btn-pay {
+  background-color: #d90f06;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-family: 'kulturista';
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-footer-price {
+  font-family: 'kulturista';
+  margin-right: 2rem;
+}
+
+.cart-footer-quantity {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  padding-top: 0.25rem;
+}
+
+.cart-btn-buy {
+  border: 2px solid #d90f06;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #d90f06;
 }

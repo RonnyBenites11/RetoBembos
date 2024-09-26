@@ -22,11 +22,11 @@ const Navigation = () => {
                   <span>MENÚ</span>
                 </a>
               </div>
-              <div className="nav-menu-item">
+              {/*<div className="nav-menu-item">
                 <a href="/copa-america" className="icon-copa-america">
                   <img src="https://www.bembos.com.pe/img/copa-america/logo-2.png" alt="Icono copa america" />
                 </a>
-              </div>
+              </div>*/}
               <div className="nav-menu-item">
                 <a href="/menu/combos">
                   <img src="https://www.bembos.com.pe/_nuxt/img/combo.e6f7c16.svg" alt="COMBOS" />
@@ -38,7 +38,7 @@ const Navigation = () => {
                   <img src="https://www.bembos.com.pe/_nuxt/img/bmb_promociones.b14af19.svg" alt="PROMOCIONES" />
                   <span>PROMOCIONES</span>
                 </a>
-                <ul className="hoversubs">
+                {/* <ul className="hoversubs">
                   <li>
                     <a href="#">Promociones Personales</a>
                   </li>
@@ -51,7 +51,7 @@ const Navigation = () => {
                   <li>
                     <a href="#">Cupones</a>
                   </li>
-                </ul>
+                </ul>*/}
               </div>
               <div className="nav-menu-item">
                 <a href="/menu/hamburguesas">
@@ -65,30 +65,30 @@ const Navigation = () => {
                   <span>BENEFICIOS</span>
                 </a>
               </div>
-              <div className="navigation-cart">
-                <div className="main-top-center">
-                  <button className="btn_recojo">
-                    <IoStorefrontOutline className="icono-tienda" />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="99.754"
-                      height="30.587"
-                      viewBox="0 0 99.754 86.587"
-                    ></svg>
-                    <div className="text_recojo">
-                      Pide en tiendas <strong>SIN COLAS</strong>
-                    </div>
-                  </button>
+            </div>
+            <div className="navigation-cart">
+              <div className="main-top-center">
+                <div className="btn_recojo">
+                  <img src="/src/assets/img/market.svg" alt="" className="icono-tienda" />
+                  {/*<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="99.754"
+                    height="30.587"
+                    viewBox="0 0 99.754 86.587"
+                  ></svg>*/}
+                  <span className="text_recojo">
+                    Pide en tiendas <span className="text_recojo_red">sin colas</span>
+                  </span>
                 </div>
-                <button className="btn_cart">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32.009" height="32.009" viewBox="0 0 32.009 32.009">
-                    {<LuShoppingCart />}
-                  </svg>
-                  <p>
-                    <span>0</span>
-                  </p>
-                </button>
               </div>
+              <button className="btn_cart">
+                <div className="btn-cart-img">
+                  <img src="/src/assets/img/cart.svg" alt="" />
+                </div>
+                <p>
+                  <span>0</span>
+                </p>
+              </button>
             </div>
           </div>
         </div>

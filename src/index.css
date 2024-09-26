@@ -66,3 +66,15 @@ button {
 a {
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 2rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1a317e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
