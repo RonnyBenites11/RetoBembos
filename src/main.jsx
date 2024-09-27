@@ -5,6 +5,6 @@ import './index.css';
 import Menu from './components/Menu/Menu.jsx';
 import Combos from './components/Combos/Combos.jsx';
 
-createRoot(document.getElementById('root')).render(<App />);
+// createRoot(document.getElementById('root')).render(<App />);
 /*createRoot(document.getElementById('root')).render(<Menu />);*/
-/*createRoot(document.getElementById('root')).render(<Combos />);*/
+createRoot(document.getElementById('root')).render(<Combos />);

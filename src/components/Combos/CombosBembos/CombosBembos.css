@@ -1,0 +1,169 @@
+
+.menu-container{
+  width: 1000px;
+  
+  margin: 0 auto;
+  border-radius: 15px;
+  top:170px;
+  position: relative;
+  margin-bottom: 180px;
+  
+}
+.detail-info h1 {
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #21388b;
+  font-size: 28px;
+}
+
+.menu-items {
+  width: 33%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  /* Espacio entre cada tarjeta */
+  padding: 45px;
+ 
+  margin-left: -30px ;
+  margin-right: 5px;
+  position: relative;
+  height: 100%;
+}
+
+.menu-item {
+  width:282.02px;
+  position: relative;
+    transition: all .2s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .11);
+    border-radius: 20px;
+    background: #fff;
+    height: 459px;
+    
+}
+.span {
+  height: 0px;
+}
+.item-card {
+  
+ 
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  padding: 13px;
+    margin: 0 5px;
+    position: relative;
+    height: 100%;
+}
+
+
+
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.item-image img {
+  width: 285.02px;
+    height: 255px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    margin-left: -20px;
+    object-fit: cover;
+  transition: transform 0.4s;
+  overflow: hidden;
+}
+.item-image img:hover {
+  transform: scale(1.05);
+}
+
+
+.item-details {
+  margin-top: -25px;
+  padding: 10px 15px 15px;
+  text-align: center;
+}
+
+.item-details h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1px;
+}
+.item-details a{
+  color: #030819;
+    font-size: 15px;
+    font-family: din1451;
+    line-height: 22px;
+    text-align: center;
+    margin: auto;
+    padding-left: 5px;
+    min-height: 44px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+    text-decoration: none
+}
+
+.price {
+  font-weight: 700;
+    color: #030819;
+    font-family: din1451;
+    font-size: 27px;
+    padding: 5px 0;
+    border-radius: 20px;
+    display: inline-block;
+    width: 50%;
+    margin-top: -30px;
+}
+
+.terms-link {
+  font-size: 17px;
+  text-decoration: underline;
+  
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.more-button {
+  width: 100%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  background: #193694;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: din1451;
+  outline: 0;
+  height: 43px;
+
+}
+
+.more-button:hover {
+  background-color: #003c7d;
+}
+
+/* Diseño responsive para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .menu-items {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-items {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
