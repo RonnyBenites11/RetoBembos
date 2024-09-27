@@ -1,0 +1,15 @@
+.content-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.35;
+  transition-property: opacity;
+  display: none;
+}
+
+.content-bg.visible {
+  display: block;
+}

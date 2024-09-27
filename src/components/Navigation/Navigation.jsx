@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navigation.css';
 import { IoStorefrontOutline } from 'react-icons/io5';
 import { LuShoppingCart } from 'react-icons/lu';
+import { Fa0 } from 'react-icons/fa6';
+import { Cart } from '../Cart/Cart';
+import { ContenBg } from '../ContentBg/ContenBg';
 
 const Navigation = () => {
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible((prevState) => !prevState);
+  };
+
+  const closeCart = () => {
+    setVisible(false);
+  };
   return (
     <div>
       {/* Vista de escritorio */}
@@ -22,11 +34,6 @@ const Navigation = () => {
                   <span>MENÚ</span>
                 </a>
               </div>
-              {/*<div className="nav-menu-item">
-                <a href="/copa-america" className="icon-copa-america">
-                  <img src="https://www.bembos.com.pe/img/copa-america/logo-2.png" alt="Icono copa america" />
-                </a>
-              </div>*/}
               <div className="nav-menu-item">
                 <a href="/menu/combos">
                   <img src="https://www.bembos.com.pe/_nuxt/img/combo.e6f7c16.svg" alt="COMBOS" />
@@ -81,7 +88,7 @@ const Navigation = () => {
                   </span>
                 </div>
               </div>
-              <button className="btn_cart">
+              <button className="btn_cart" onClick={toggleVisibility}>
                 <div className="btn-cart-img">
                   <img src="/src/assets/img/cart.svg" alt="" />
                 </div>
@@ -93,6 +100,11 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+
+      <ContenBg visible={visible} />
+
+      <Cart visible={visible} onClose={closeCart} />
+
       {/* Vista móvil */}
       <div className="mobile-view">
         <div className="header">

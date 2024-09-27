@@ -7,13 +7,15 @@ import Anuncio from './components/Anuncio';
 import Footer from './components/Footer';
 import { ContainerProducts } from './components/ContainerProducts/ContainerProducts';
 import { Cart } from './components/Cart/Cart';
+import { ContenBg } from './components/ContentBg/ContenBg';
 
 const App = () => {
   return (
     <div className="app">
       <Header className="fix" />
       <Carrusel />
-      {/*{<Cart />}*/}
+      <ContenBg />
+      {<Cart />}
       <ContainerProducts sectionName={'promocion'} />
       <ContainerProducts sectionName={'menu'} />
       <Anuncio />

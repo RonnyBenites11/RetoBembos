@@ -1,9 +1,9 @@
 import React from 'react';
 import './Cart.css';
 
-export const Cart = () => {
+export const Cart = ({ visible, onClose }) => {
   return (
-    <div className="cart-container">
+    <div className={`cart-container ${visible ? 'visible' : ''}`}>
       <div className="cart-adress">
         <p className="cart-adress-title">
           <span className="cart-adress-txt">Entregar en: </span>Miraflores Bowling Park 135,
@@ -12,7 +12,7 @@ export const Cart = () => {
         <div className="cart-down-img">
           <img src="/src/assets/img/down-arrow.svg" alt="" />
         </div>
-        <div className="cart-close">
+        <div className="cart-close" onClick={onClose}>
           <span>x</span>
         </div>
       </div>
@@ -101,7 +101,7 @@ export const Cart = () => {
             </div>
           </div>
         </div>
-        <div className="cart-footer">
+        <div className={`cart-footer ${visible ? 'visible' : ''}`}>
           <button className="cart-btn-pay cart-footer-btn">
             <span className="cart-footer-quantity">1</span>Ir a pagar{' '}
             <span className="cart-footer-price">S/. 61.20</span>
