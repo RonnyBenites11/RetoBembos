@@ -7,6 +7,7 @@
   top:170px;
   position: relative;
   margin-bottom: 180px;
+  height: 100%;
   
 }
 .detail-info h1 {
@@ -14,6 +15,7 @@
   margin: 15px 0;
   color: #21388b;
   font-size: 28px;
+  
 }
 
 .menu-items {
@@ -24,10 +26,10 @@
   /* Espacio entre cada tarjeta */
   padding: 45px;
  
-  margin-left: -30px ;
+  margin-left: 5px ;
   margin-right: 5px;
   position: relative;
-  height: 100%;
+ 
 }
 
 .menu-item {
@@ -54,6 +56,7 @@
     margin: 0 5px;
     position: relative;
     height: 100%;
+    overflow: hidden;
 }
 
 
@@ -68,7 +71,6 @@
   width: 24px;
   height: 24px;
 }
-
 .item-image img {
   width: 285.02px;
     height: 255px;

@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
 .hamburguesas {
-    box-sizing: border-box;
-    margin: 10px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-family: din1451;
+    margin: 0 auto;
+  border-radius: 15px;
+  top: -50px;
+  position: relative;
+  margin-bottom: 180px;
   }
   
   .titulo {
@@ -12,18 +16,24 @@
     text-transform: uppercase;
     color: rgb(33, 56, 139);
     font-size: 28px;
+    padding: 5px 70px;
   }
   
   .contenido {
     margin: 0 10px 10px;
-    font-size: 14px;
-    font-family: Kulturista;
-    padding: 10px 0;
+    font-size: 12px;
+    
+    padding: 5px 80px;
+
   }
   
   .descripcion {
     overflow: hidden;
     text-align: left;
+  }
+  .descripcion p {
+    text-align: justify;
+    font-family: Kulturista;
   }
   
   .leer-mas {
