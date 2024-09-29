@@ -1,0 +1,100 @@
+.product-description p{
+    padding-right: 37px;
+}
+
+.product-details{
+    width: 745px;
+    padding-left: 15px;
+}
+
+.custom-button , .custom-button2{
+    box-sizing: border-box;
+    margin: 0 0 10px;
+    width: 200px;
+    height: 37px;
+    padding: 5px;
+    font-family: din1451;
+    font-size: 23px;
+    color: rgb(33, 56, 139);
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s;
+    border-bottom: 3px solid rgb(255, 181, 0);
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+  }
+
+  .item-container {
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 25px;
+ 
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    text-align: start;
+    font-weight: 300;
+    font-family: din1451;
+  }
+  
+  .items {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .item {
+    box-sizing: border-box;
+    margin: 0;
+    cursor: pointer;
+    width: 150px;
+    height: 109px;
+    text-align: center;
+    float: left;
+    position: relative;
+  }
+  
+  .hidden-checkbox {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .image-container {
+    box-sizing: border-box;
+    margin: 0;
+    width: 70px;
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item-name {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: Kulturista;
+    padding-right: 81px;
+  }
+  
+  .item-price {
+    box-sizing: border-box;
+    margin: 0;
+    color: rgb(33, 56, 139);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Kulturista;
+    padding-right: 81px;
+  }
+  
+  
