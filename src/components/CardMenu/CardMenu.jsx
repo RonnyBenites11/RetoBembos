@@ -10,8 +10,9 @@ export const CardMenu = () => {
     const readMenu = async () => {
       try {
         const { data } = await axios.get('http://localhost:3000/menu');
-        setMenuData(data);
-        console.log(data);
+        // Asumiendo que la estructura es: [{ tipos: [...] }]
+        setMenuData(data[0]?.tipos || []); // Accedemos a tipos y usamos un array vacío como fallback
+        console.log(data[0]?.tipos); // Muestra los tipos en la consola
       } catch (error) {
         console.log(error);
       }
@@ -22,9 +23,9 @@ export const CardMenu = () => {
   return (
     <div className="card-menu-container">
       {menuData.map((menu, index) => (
-        <div className="card" key={index}>
+        <div className="card" key={menu.id}> {/* Cambié el key a menu.id para ser único */}
           <div className="card-img">
-            <img src={menu.img} alt="imagen" />
+            <img src={menu.img} alt={menu.nombre} /> {/* Mejora en el atributo alt */}
           </div>
           <div className="card-info">
             <h3 className="card-name">{menu.nombre}</h3>
@@ -37,6 +38,7 @@ export const CardMenu = () => {
     </div>
   );
 };
+
 
 /*const menuBtns = document.querySelectorAll('.card-btn');
       menuBtns.forEach((btn) => {

@@ -70,6 +70,9 @@
 .icon img {
   width: 24px;
   height: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 .item-image img {
   width: 285.02px;
@@ -82,7 +85,7 @@
   overflow: hidden;
 }
 .item-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 

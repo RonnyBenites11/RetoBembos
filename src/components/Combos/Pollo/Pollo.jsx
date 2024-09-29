@@ -15,15 +15,17 @@ const Pollo = () => {
       <Navigation />
       <NavigationSec />
       <CombosBembos
-        apiUrl="http://localhost:3000/loncheritas"
-        title="Descubre nuestras loncheras | BEMBOS"
+        apiUrl="http://localhost:3000/pollo"
+        title="Descubre nuestro irresistible menú de pollo | BEMBOS"
         info={
           <section className="hamburguesas">
-            <h2 className="titulo">LONCHERITAS de BEMBOS</h2>
+            <h2 className="titulo">SÁNDWICHES Y HAMBURGUESAS DE POLLO</h2>
             <div className="contenido">
               <div className="descripcion">
                 <p>
-                Las loncheritas infantiles son una opción ideal para los más chicos. Puedes pedir tu loncherita Bembos con hamburguesa o nuggets, y te incluye papas fritas y bebida.
+                En Bembos no solamente tenemos hamburguesas de carne, también tenemos hamburguesas y sándwiches de pollo broaster y grill. 
+                Tenemos las mejores combinaciones de ingredientes que hacen que nuestras hamburguesas tengan un sabor irresistible. 
+                Pídelas por delivery web y empieza a disfrutar de lo mejor en hamburguesas y sándwiches de Bembos.
                 </p>
               </div>
             </div>

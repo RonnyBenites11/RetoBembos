@@ -19,7 +19,7 @@ const Hamburguesa = () => {
         title="Conoce nuestras irresistibles hamburguesas | BEMBOS"
         info={
           <section className="hamburguesas">
-           
+           <h1>Hamburguesas a la parrilla</h1>
             <div className="contenido">
               <div className="descripcion">
                 <p>

@@ -501,7 +501,11 @@
     }
   ],
   "complementos": [
+    
     {
+      "tipos":[{
+
+      
       "nombre": "Papas Inka Chips",
       "precio": 3.0,
       "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-inka-chips-nueva.jpg",
@@ -536,9 +540,14 @@
       "id": 33,
       "link": "family-box-piqueo"
     }
+  ]
+    }
   ],
+
   "bebidas": [
     {
+      "tipos":[
+        {
       "nombre": "Agua San Luis S/G",
       "precio": 4.9,
       "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/a/san-luis-sin-gas-nueva.jpg",
@@ -587,14 +596,20 @@
       "id": 40,
       "link": "inca-kola-sin-azucar-500-ml"
     }
+  ]
+}
   ],
   "helados": [
     {
+      "tipos":[
+        {
       "nombre": "Helado Mini Princesa",
       "precio": 4.9,
       "id": 41,
       "img": "https://www.bembos.com.pe/_ipx/q_85,w_144,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/e/helado-mini-princesa-base_1.jpg",
-      "link": "helado-mini-princesa",
+      "link": "helado-mini-princesa"
+        }
+      ],
       "preguntas": [
         {
           "nropregunta": 1,
@@ -675,69 +690,79 @@
   ],
   "inka-chips": [
     {
+      "tipos":[
+        {
       "nombre": "Papas Inka Chips",
       "precio": 3,
       "id": 42,
       "img": "https://www.bembos.com.pe/_ipx/q_85,w_144,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-inka-chips-nueva.jpg",
       "link": "papas-inka-chips"
     }
-  ],
-  "menu": [
-    {
-      "nombre": "Promociones Exclusivas Web",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/promociones-bembos-delivery.webp",
-      "link": "/promociones/delivery-hamburguesas",
-      "id": 43
-    },
-    {
-      "nombre": "Combos",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_230x308/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/combo-churrita-500x669.webp",
-      "link": "/menu/combos",
-      "id": 44
-    },
-    {
-      "nombre": "Hamburguesas",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/hamburguesas_2.webp",
-      "link": "/menu/hamburguesas",
-      "id": 45
-    },
-    {
-      "nombre": "Pollo",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/pollo_2.webp",
-      "link": "/menu/pollo",
-      "id": 46
-    },
-    {
-      "nombre": "Loncheritas",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/loncheritas_1.webp",
-      "link": "/menu/loncheritas",
-      "id": 47
-    },
-    {
-      "nombre": "Complementos",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/complementos_1.webp",
-      "link": "/menu/complementos",
-      "id": 48
-    },
-    {
-      "nombre": "Bebidas ",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-gaseosas.webp",
-      "link": "/menu/bebidas",
-      "id": 49
-    },
-    {
-      "nombre": "Helados",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-mini-princesa.webp",
-      "link": "/menu/helados",
-      "id": 50
-    },
-    {
-      "nombre": "Inka Chips",
-      "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-inka-chips-1.webp",
-      "link": "/menu/inka-chips",
-      "id": 51
+  ]
     }
   ],
+  
+  "menu": [
+    {
+      "tipos": [
+        {
+          "nombre": "Promociones Exclusivas Web",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/promociones-bembos-delivery.webp",
+          "link": "/promociones/delivery-hamburguesas",
+          "id": 43
+        },
+        {
+          "nombre": "Combos",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_230x308/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/combo-churrita-500x669.webp",
+          "link": "/menu/combos",
+          "id": 44
+        },
+        {
+          "nombre": "Hamburguesas",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/hamburguesas_2.webp",
+          "link": "/menu/hamburguesas",
+          "id": 45
+        },
+        {
+          "nombre": "Pollo",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/pollo_2.webp",
+          "link": "/menu/pollo",
+          "id": 46
+        },
+        {
+          "nombre": "Loncheritas",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/loncheritas_1.webp",
+          "link": "/menu/loncheritas",
+          "id": 47
+        },
+        {
+          "nombre": "Complementos",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/complementos_1.webp",
+          "link": "/menu/complementos",
+          "id": 48
+        },
+        {
+          "nombre": "Bebidas",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-gaseosas.webp",
+          "link": "/menu/bebidas",
+          "id": 49
+        },
+        {
+          "nombre": "Helados",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-mini-princesa.webp",
+          "link": "/menu/helados",
+          "id": 50
+        },
+        {
+          "nombre": "Inka Chips",
+          "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-inka-chips-1.webp",
+          "link": "/menu/inka-chips",
+          "id": 51
+        }
+      ]
+    }
+  ],
+
   "promociones_online": [
     {
       "nombre": "Dupla Perfecta",
@@ -1295,3 +1320,4 @@
     }
   ]
 }
+ 
