@@ -15,7 +15,7 @@ const Combos = () => {
       <Navigation />
       <NavigationSec />
       <Combo/>
-       <Hamburguesa/>
+      
       
 
 {

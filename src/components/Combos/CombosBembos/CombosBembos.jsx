@@ -1,28 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './CombosBembos.css';
 
-const CombosBembos = ({ apiUrl, title,info }) => {
+const CombosBembos = ({ apiUrl, title, info }) => {
   const [items, setItems] = useState([]);
+  
 
   useEffect(() => {
     const fetchItems = async () => {
       try {
         const response = await fetch(apiUrl); // Usar la URL pasada como prop
         const data = await response.json();
-        setItems(data);
+        
+        // Aquí asumimos que 'tipos' y 'preguntas' son parte de la estructura de datos.
+        if (data.length > 0) {
+          const [menuData] = data;
+          setItems(menuData.tipos); // Ajusta para usar la sección 'tipos'
+          // Ajusta para usar la sección 'preguntas'
+        }
       } catch (error) {
         console.error('Error fetching items:', error);
       }
     };
 
     fetchItems();
-  }, [apiUrl]); // Dependencia de la URL para realizar fetch cuando cambie
+  }, [apiUrl]);
 
   return (
     <div className='menu-container'>
-
       <div className="detail-info">
-        <h1>{title}</h1> {/* Usar el título pasado como prop */}
+        <h1>{title}</h1>
         <div className="menu-items">
           {items.map(item => (
             <div className="menu-item" key={item.id} id={`item-${item.link}`}>
@@ -34,11 +40,7 @@ const CombosBembos = ({ apiUrl, title,info }) => {
                   />
                 </span>
                 <div className="item-image">
-                  <img
-                    src={item.img}
-                    alt={item.nombre}
-                    loading="lazy"
-                  />
+                  <img src={item.img} alt={item.nombre} loading="lazy" />
                 </div>
                 <div className="item-details">
                   <a href={`${item.link}`}>
@@ -49,22 +51,18 @@ const CombosBembos = ({ apiUrl, title,info }) => {
                     <a href="/terms" className="terms-link">Términos y Condiciones</a>
                   </div>
                   <button className="more-button">Ver más</button>
-                
                 </div>
-                
               </div>
-             
             </div>
-             
           ))}
-          
         </div>
         
-        <section> {info}</section>
-      </div>
+        {/* Renderizar preguntas */}
       
+
+        { <section>{info}</section> }
+      </div>
     </div>
-    
   );
 };
 
