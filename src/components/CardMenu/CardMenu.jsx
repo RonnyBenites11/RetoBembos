@@ -15,6 +15,9 @@ export const CardMenu = forwardRef((props, ref) => {
       try {
         const { data } = await axios.get('http://localhost:3000/menu');
         setMenuData(data);
+
+        setMenuData(data[0]?.tipos || []);
+        console.log(data[0]?.tipos);
       } catch (error) {
         console.log(error);
       }
@@ -44,9 +47,7 @@ export const CardMenu = forwardRef((props, ref) => {
               </div>
               <div className="card-info">
                 <h3 className="card-name">{menu.nombre}</h3>
-                <button className="card-btn" onClick={() => (window.location.href = menu.link)}>
-                  Ver Todos
-                </button>
+                <button className="card-btn">Ver Todos</button>
               </div>
             </div>
           </SwiperSlide>
@@ -55,3 +56,25 @@ export const CardMenu = forwardRef((props, ref) => {
     </div>
   );
 });
+{
+  /*<div className="card-menu-container">
+      {menuData.map((menu, index) => (
+        <div className="card" key={menu.id}> {}
+          <div className="card-img">
+            <img src={menu.img} alt={menu.nombre} /> {}
+          </div>
+          <div className="card-info">
+            <h3 className="card-name">{menu.nombre}</h3>
+            <button className="card-btn" onClick={() => (window.location.href = menu.link)}>
+              Ver Todos
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>*/
+}
+
+/*const menuBtns = document.querySelectorAll('.card-btn');
+      menuBtns.forEach((btn) => {
+        btn.addEventListener('click', (window.location.href = `${menu.link}`));
+      });*/

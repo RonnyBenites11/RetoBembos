@@ -1,0 +1,107 @@
+.app-promotion-container {
+    box-sizing: border-box;
+    margin: 40px 0;
+    width: 100%;
+    background-color: rgb(251, 185, 5);
+    padding: 10px 0;
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: start;
+    font-weight: 300;
+    font-family: din1451;
+     margin-bottom: -0px; 
+  }
+  
+  .app-promotion-header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 0 0 5px;
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .app-promotion-header h3 {
+    margin: 0;
+    font-family: kulturista, sans-serif;
+    font-weight: 100;
+    width: 40%;
+  }
+  
+  .app-icon {
+    width: 5%;
+  }
+  
+  .app-icon img {
+    width: 100%;
+   
+  }
+  
+  .app-promotion-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -80px;
+  }
+  
+  .app-promotion-image {
+    margin: 0 50px 0 0;
+  }
+  
+  .app-promotion-image img {
+    max-width: 260px;
+    object-position: 0 50px;
+    height: 350px;
+  }
+  
+  .app-promotion-details {
+    margin: 10px 0 0 50px;
+    width: 40%;
+    position: relative;
+  }
+  
+  .app-promotion-details ul {
+    margin: 5px 0 15px;
+    padding: 0 10px;
+  }
+  
+  .app-promotion-details li {
+    display: flex;
+    padding: 0 0 10px;
+    align-items: center;
+  }
+  
+  .checkmark {
+    margin: 0 10px 0 0;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    background-color: rgb(33, 56, 139);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .download-section {
+    text-align: center;
+  }
+  
+  .download-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .download-links a {
+    margin: 0 5px;
+  }
+  
+  .download-links img {
+    width: 120px;
+  }
+  

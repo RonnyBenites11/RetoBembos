@@ -24,7 +24,6 @@ const NavigationSec = () => {
       'Combos',
       'Hamburguesas',
       'Pollo',
-      'Menús al Plato',
       'Loncheritas',
       'Complementos',
       'Bebidas',
