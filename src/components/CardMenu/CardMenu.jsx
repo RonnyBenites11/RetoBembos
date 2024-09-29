@@ -1,9 +1,13 @@
+import React, { useEffect, useState, forwardRef } from 'react';
 import './CardMenu.css';
-import '../CardPromocion/CardPromocion.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 
-export const CardMenu = () => {
+export const CardMenu = forwardRef((props, ref) => {
   const [menuData, setMenuData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +15,6 @@ export const CardMenu = () => {
       try {
         const { data } = await axios.get('http://localhost:3000/menu');
         setMenuData(data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -20,25 +23,35 @@ export const CardMenu = () => {
   }, []);
 
   return (
-    <div className="card-menu-container">
-      {menuData.map((menu, index) => (
-        <div className="card" key={index}>
-          <div className="card-img">
-            <img src={menu.img} alt="imagen" />
-          </div>
-          <div className="card-info">
-            <h3 className="card-name">{menu.nombre}</h3>
-            <button className="card-btn" onClick={() => (window.location.href = menu.link)}>
-              Ver Todos
-            </button>
-          </div>
-        </div>
-      ))}
+    <div className="swiper-container">
+      <Swiper
+        ref={ref}
+        slidesPerView={4}
+        slidesPerGroup={1}
+        centeredSlides={false}
+        spaceBetween={30}
+        /*  pagination={{
+          type: 'fraction',
+        }}*/
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {menuData.map((menu, index) => (
+          <SwiperSlide key={index}>
+            <div className="card">
+              <div className="card-img">
+                <img src={menu.img} alt={menu.nombre} />
+              </div>
+              <div className="card-info">
+                <h3 className="card-name">{menu.nombre}</h3>
+                <button className="card-btn" onClick={() => (window.location.href = menu.link)}>
+                  Ver Todos
+                </button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
-};
-
-/*const menuBtns = document.querySelectorAll('.card-btn');
-      menuBtns.forEach((btn) => {
-        btn.addEventListener('click', (window.location.href = `${menu.link}`));
-      });*/
+});

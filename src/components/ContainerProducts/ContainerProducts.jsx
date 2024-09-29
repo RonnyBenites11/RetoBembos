@@ -1,7 +1,4 @@
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useRef } from 'react';
 import './ContainerProducts.css';
 import { CardPromocion } from '../CardPromocion/CardPromocion';
 import { CardMenu } from '../CardMenu/CardMenu';
@@ -13,49 +10,29 @@ export const ContainerProducts = ({ sectionName }) => {
   };
 
   const title = sectionTitle[sectionName];
+  const swiperRef = useRef(null);
+
+  const handleNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext(); // Cambiar aquí
+    }
+  };
+
+  const handlePrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev(); // Cambiar aquí
+    }
+  };
 
   const renderContent = () => {
     switch (sectionName) {
       case 'promocion':
         return <CardPromocion />;
       case 'menu':
-        return <CardMenu />;
+        return <CardMenu ref={swiperRef} />;
+      default:
+        return null; // Añadir un caso por defecto
     }
-  };
-
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   return (
@@ -64,14 +41,11 @@ export const ContainerProducts = ({ sectionName }) => {
         <div className="products-title">
           <h2>{title}</h2>
           <div className="products-icon">
-            <img src="/src/assets/img/left-arrow.svg" alt="left" />
-            <img src="/src/assets/img/right-arrow.svg" alt="right" />
+            <img src="/src/assets/img/left-arrow.svg" alt="left" onClick={handlePrev} style={{ cursor: 'pointer' }} />
+            <img src="/src/assets/img/right-arrow.svg" alt="right" onClick={handleNext} style={{ cursor: 'pointer' }} />
           </div>
         </div>
-        <div className="products-swiper">
-          <Slider {...settings}></Slider>
-          {renderContent()}
-        </div>
+        <div className="products-swiper">{renderContent()}</div>
       </div>
     </section>
   );
