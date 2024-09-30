@@ -14,10 +14,9 @@ export const CardMenu = forwardRef((props, ref) => {
     const readMenu = async () => {
       try {
         const { data } = await axios.get('http://localhost:3000/menu');
-        setMenuData(data);
+        /* setMenuData(data);*/
 
         setMenuData(data[0]?.tipos || []);
-        console.log(data[0]?.tipos);
       } catch (error) {
         console.log(error);
       }
@@ -26,7 +25,7 @@ export const CardMenu = forwardRef((props, ref) => {
   }, []);
 
   return (
-    <div className="swiper-container">
+    <div className="swiper-container swiper-menu">
       <Swiper
         ref={ref}
         slidesPerView={4}

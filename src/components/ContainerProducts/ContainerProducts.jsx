@@ -10,26 +10,31 @@ export const ContainerProducts = ({ sectionName }) => {
   };
 
   const title = sectionTitle[sectionName];
-  const swiperRef = useRef(null);
+  const promoRef = useRef(null);
+  const menuRef = useRef(null);
 
   const handleNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext(); // Cambiar aquí
+    if (sectionName === 'promocion' && promoRef.current) {
+      promoRef.current.swiper.slideNext();
+    } else if (sectionName === 'menu' && menuRef.current) {
+      menuRef.current.swiper.slideNext();
     }
   };
 
   const handlePrev = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev(); // Cambiar aquí
+    if (sectionName === 'promocion' && promoRef.current) {
+      promoRef.current.swiper.slidePrev();
+    } else if (sectionName === 'menu' && menuRef.current) {
+      menuRef.current.swiper.slidePrev();
     }
   };
 
   const renderContent = () => {
     switch (sectionName) {
       case 'promocion':
-        return <CardPromocion />;
+        return <CardPromocion ref={promoRef} />;
       case 'menu':
-        return <CardMenu ref={swiperRef} />;
+        return <CardMenu ref={menuRef} />;
       default:
         return null; // Añadir un caso por defecto
     }
@@ -41,8 +46,8 @@ export const ContainerProducts = ({ sectionName }) => {
         <div className="products-title">
           <h2>{title}</h2>
           <div className="products-icon">
-            <img src="/src/assets/img/left-arrow.svg" alt="left" onClick={handlePrev} style={{ cursor: 'pointer' }} />
-            <img src="/src/assets/img/right-arrow.svg" alt="right" onClick={handleNext} style={{ cursor: 'pointer' }} />
+            <img src="/src/assets/img/left-arrow.svg" alt="left" onClick={handlePrev} />
+            <img src="/src/assets/img/right-arrow.svg" alt="right" onClick={handleNext} />
           </div>
         </div>
         <div className="products-swiper">{renderContent()}</div>
