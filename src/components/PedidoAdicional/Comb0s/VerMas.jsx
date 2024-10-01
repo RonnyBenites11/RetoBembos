@@ -25,47 +25,47 @@ const VerMas = () => {
         <a href="#">Combos Extrema</a>
       </div>
 
-      <div class="producto-container">
-        <div class="producto-image">
+      <div className="producto-container">
+        <div className="producto-image">
           <img
             src="https://www.bembos.com.pe/_ipx/q_85,w_275,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-extrema-nuevo-bb.jpg"
             id="1"
           />
         </div>
-        <div class="producto-details">
-          <h1 class="producto-title">
+        <div className="producto-details">
+          <h1 className="producto-title">
             <strong>Combo Extrema</strong>
           </h1>
-          <h2 class="producto-description">
+          <h2 className="producto-description">
             Hamburguesa Extrema a la parrilla: Hamburguesa doble a la parrilla
             con queso edam, tocino, tomate, lechuga y mayonesa. Papa mediana y
             gaseosa de 500 ml.
           </h2>
-          <div class="chips-header">
-            <span class="chips-header-number">1</span>
-            <p class="chips-header-text"> Elige tu hamburguesa extrema</p>
-            <span class="toggle-icon">▼</span>
+          <div className="chips-header">
+            <span className="chips-header-number">1</span>
+            <p className="chips-header-text"> Elige tu hamburguesa extrema</p>
+            <span className="toggle-icon">▼</span>
           </div>
 
-          <div id="chipsContainer" class="chipsContainer">
-            <select class="hidden-select" name="" id="">
+          <div id="chipsContainer" className="chipsContainer">
+            <select className="hidden-select" name="" id="">
               <option value="19140">19140</option>
               <option value="19141">19141</option>
             </select>
 
-            <button class="product-button">
-              <div class="product-image-container">
-                <span class="product-image">
+            <button className="product-button">
+              <div className="product-image-container">
+                <span className="product-image">
                   <img src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-extrema-calada_1_.png" id="1" 
                   />
                 </span>
               </div>
-              <div class="product-description">
+              <div className="product-description">
                 <p>Extra Mediana + S/. 0.00</p>
               </div>
             </button>
 
-            <button class="product-button">
+            <button className="product-button">
               <div class="product-image-container bordered">
                 <span class="product-image">
                 <img src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-extrema-calada_3_1__1_2_1_1.png" />
