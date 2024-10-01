@@ -75,5 +75,5 @@ export const CardMenu = forwardRef((props, ref) => {
 
 /*const menuBtns = document.querySelectorAll('.card-btn');
       menuBtns.forEach((btn) => {
-        btn.addEventListener('click', (window.location.href = `${menu.link}`));
+        btn.addEventListener('click', (window.location.href = ${menu.link}));
       });*/
