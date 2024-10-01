@@ -123,3 +123,20 @@
   height: 100%;
   border-radius: inherit;
 }
+
+@media (max-width: 480px) {
+  .header {
+    width: 480px;
+  }
+
+  .delivery-info {
+    width: 480px;
+    height: 48px;
+  }
+
+  .delivery-info img {
+    width: 350px;
+    height: 48px;
+    object-fit: cover;
+  }
+}

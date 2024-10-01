@@ -104,3 +104,7 @@
 .promos-products-cupones {
   grid-template-columns: repeat(4, 1fr);
 }
+
+.faq-icon-blue {
+  color: blue; /* O el color que prefieras */
+}

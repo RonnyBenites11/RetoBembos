@@ -21,7 +21,7 @@
 }
 
 .carousel-container .slick-dots li.slick-active button:before {
-  color: white; 
+  color: white;
 }
 
 .carousel-container .slick-prev,
@@ -42,4 +42,14 @@
 .carousel-container .slick-prev:before,
 .carousel-container .slick-next:before {
   font-size: 40px;
+}
+
+@media (max-width: 1023px) {
+  .carousel-container {
+    width: 1130px;
+  }
+
+  .slick-slider {
+    width: 100%;
+  }
 }

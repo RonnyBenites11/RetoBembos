@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Cart.css';
+import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export const Cart = ({ visible, onClose }) => {
+  const [addComplementData, setAddComplement] = useState([]);
+
+  useEffect(() => {
+    const readAddComplement = async () => {
+      try {
+        const { data } = await axios.get('http://localhost:3000/complementos');
+        setAddComplement(data[0]?.tipos || []);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    readAddComplement();
+  }, []);
+
   return (
     <div className={`cart-container ${visible ? 'visible' : ''}`}>
       <div className="cart-adress">
@@ -68,38 +87,29 @@ export const Cart = ({ visible, onClose }) => {
         </div>
         <div className="cart-add-container">
           <p className="cart-add-title">También Agregar</p>
-          <div className="cart-add-slider">
-            <div className="cart-add-product">
-              <div className="cart-add-img">
-                <img
-                  src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papa_mediana_1.jpg"
-                  alt="imagen"
-                />
-              </div>
-              <div className="cart-add-detail">
-                <div className="cart-add-txt">
-                  <span className="cart-add-name">Papa Mediana</span>
-                  <span className="cart-add-price">S/. 12.90</span>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={2}
+            navigation
+            pagination={{ clickable: true }} // Si deseas paginación
+          >
+            {addComplementData.map((addcomplement, index) => (
+              <SwiperSlide key={index}>
+                <div className="cart-add-product">
+                  <div className="cart-add-img">
+                    <img src={addcomplement.img} alt="imagen" />
+                  </div>
+                  <div className="cart-add-detail">
+                    <div className="cart-add-txt">
+                      <span className="cart-add-name">{addcomplement.nombre}</span>
+                      <span className="cart-add-price">S/. {addcomplement.precio}</span>
+                    </div>
+                    <button className="cart-add-btn">Agregar</button>
+                  </div>
                 </div>
-                <button className="cart-add-btn">Agregar</button>
-              </div>
-            </div>
-            <div className="cart-add-product">
-              <div className="cart-add-img">
-                <img
-                  src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papa_mediana_1.jpg"
-                  alt="imagen"
-                />
-              </div>
-              <div className="cart-add-detail">
-                <div className="cart-add-txt">
-                  <span className="cart-add-name">Papa Mediana</span>
-                  <span className="cart-add-price">S/. 12.90</span>
-                </div>
-                <button className="cart-add-btn">Agregar</button>
-              </div>
-            </div>
-          </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className={`cart-footer ${visible ? 'visible' : ''}`}>
           <button className="cart-btn-pay cart-footer-btn">
