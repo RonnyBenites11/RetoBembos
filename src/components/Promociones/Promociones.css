@@ -1,0 +1,106 @@
+.promociones-container {
+  padding-top: 20rem;
+  background-color: #ffffff;
+}
+
+.promo-navigation-links {
+  display: flex;
+  font-size: 1.9rem;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 3rem;
+  padding: 1.5rem 0;
+}
+
+.promo-navigation-links a {
+  color: #000000;
+  background-color: #f6f7f8;
+  font-size: 1.9rem;
+  border: 2px solid #e2e2e2;
+  border-radius: 22px;
+  padding: 0.8rem 4.9rem 0.6rem;
+}
+
+.promo-products {
+  background-color: #f6f7f8;
+}
+
+.promo-products-container {
+  max-width: 111.4rem;
+  margin: 0 auto;
+}
+
+.promo-desct {
+  display: flex;
+  justify-content: end;
+  padding: 2.5rem 0;
+  align-items: center;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.promo-desct span {
+  font-size: 2.7rem;
+  color: #21388b;
+}
+
+.promo-search {
+  position: relative;
+}
+
+.promo-search input {
+  margin-left: 15rem;
+  padding: 8px 24px;
+  width: 25.1rem;
+  border-radius: 24px;
+  border: 1px solid #c3c3c3;
+  font-family: 'kulturista';
+  font-size: 1.5rem;
+}
+
+.promo-search img {
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.promo-title {
+  font-size: 3rem;
+  padding: 4rem 0 1.5rem 0;
+  border-bottom: 1px solid #3b3c40;
+  text-transform: uppercase;
+}
+
+.promos-cart {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.24);
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.promos-cart button {
+  background-color: #173083;
+  color: #ffffff;
+  padding: 0.8rem 14.5rem;
+  border-radius: 18px;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+.promos-products-personales,
+.promos-products-dos {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.promos-products-compartir {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.promos-products-cupones {
+  grid-template-columns: repeat(4, 1fr);
+}

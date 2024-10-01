@@ -1,11 +1,26 @@
-.card-img {
-  height: 24.2rem;
-  display: flex;
-  align-items: flex-end;
+.card-menu-container {
+  /*border: 1px solid black;*/
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5.8rem;
+  overflow: hidden;
 }
 
-/*.card-img img {
-}*/
+.card-img {
+  max-height: 25.5rem; /* Altura máxima de la imagen */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  overflow: hidden; /* Oculta el desbordamiento */
+  border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+  display: flex;
+  align-items: flex-end; /* Alinear la imagen al fondo */
+}
+
+.card-img img {
+  width: 100%; /* La imagen ocupará todo el ancho */
+  /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegúrate de que la imagen se recorte correctamente */
+}
 
 .card {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
@@ -21,11 +36,21 @@
   text-transform: uppercase;
 }
 
-.card-menu-container {
-  /*border: 1px solid black;*/
-  padding: 3rem 0;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 5.8rem;
-  overflow: hidden;
+.swiper {
+  padding: 2rem 0 1rem 0 !important;
 }
+
+.swiper-slider {
+  width: 24.2rem !important;
+}
+
+.swiper-menu {
+  padding-bottom: 4rem;
+}
+
+/*.card-img {
+  width: 100%;
+  height: 24.2rem;
+  display: flex;
+  align-items: flex-start;
+}*/

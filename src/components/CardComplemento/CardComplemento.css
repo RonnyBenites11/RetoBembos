@@ -1,0 +1,59 @@
+.complement-container {
+  padding-bottom: 2rem;
+}
+
+.complement-title {
+  font-size: 2.9rem;
+  font-weight: 100;
+  padding: 3rem 0 2rem 0;
+}
+
+.complement-products {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 11rem;
+  padding: 2rem 10rem;
+}
+
+.complement-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+}
+
+.complement-img {
+  width: 20.1rem;
+  height: 19.4rem;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.complement-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+
+.complement-img img:hover {
+  transform: scale(1.1);
+}
+
+.complement-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 1rem;
+}
+
+.complement-name {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.complement-price {
+  font-size: 2.7rem;
+  font-weight: 700;
+}

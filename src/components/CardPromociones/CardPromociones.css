@@ -1,0 +1,145 @@
+.promos-container {
+  padding: 1rem 0 5rem 0;
+}
+
+.promos-title {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+}
+
+.promos-title img {
+  width: 31px;
+  height: 32px;
+}
+
+.promos-title h3 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.promos-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.promos-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 537px;
+}
+
+.promos-info {
+  padding: 1.8rem;
+}
+
+.promos-info-title {
+  font-size: 2.3rem;
+  font-weight: 400;
+  padding: 1rem 0 2rem 0;
+}
+
+.promos-info-txt {
+  font-size: 1.5rem;
+  font-family: 'kulturista';
+}
+
+.promos-info-price {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2.5rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.promos-price-desct {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #030819;
+}
+
+.promos-price-real {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ec0b0b;
+  text-decoration: line-through;
+}
+
+.promos-info-btn {
+  font-size: 2rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.8rem 6rem;
+  background-color: #193694;
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.promos-img {
+  position: relative;
+  height: 26.378rem;
+  overflow: hidden;
+}
+
+.promos-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 15px 15px 0;
+  transition: all 0.4s;
+}
+
+.promos-img img:hover {
+  transform: scale(1.1);
+}
+
+.promos-img span,
+.promos-img a {
+  color: #ffffff;
+}
+
+.promos-desct {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  background-color: #d50e0e;
+  padding: 0.8rem 1.7rem;
+}
+
+.promos-img:hover .promos-desct {
+  visibility: hidden;
+}
+
+.promos-terms {
+  position: absolute;
+  left: 85px;
+  bottom: 12px;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.promos-products-personales,
+.promos-products-dos {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.promos-products-compartir {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.promos-products-cupones {
+  grid-template-columns: repeat(4, 1fr);
+}
