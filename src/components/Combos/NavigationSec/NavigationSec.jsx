@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NavigationSec.css'; 
+import { Link } from 'react-router-dom'; // Importamos el Link de react-router-dom
 
 const NavigationSec = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -21,14 +22,14 @@ const NavigationSec = () => {
     }, []);
   
     const categories = [
-      'Combos',
-      'Hamburguesas',
-      'Pollo',
-      'Loncheritas',
-      'Complementos',
-      'Bebidas',
-      'Helados',
-      'Inka Chips',
+      { name: 'Combos', path: '/combo' },
+      { name: 'Hamburguesas', path: '/hamburguesas' },
+      { name: 'Pollo', path: '/pollo' },
+      { name: 'Loncheritas', path: '/loncheritas' },
+      { name: 'Complementos', path: '/complementos' },
+      { name: 'Bebidas', path: '/bebidas' },
+      { name: 'Helados', path: '/helados' },
+      { name: 'Inka Chips', path: '/inka-chips' },
     ];
   
     return (
@@ -37,9 +38,9 @@ const NavigationSec = () => {
           <div key={index}>
             <li
               className={activeIndex === index ? 'active' : ''}
-              onClick={() => handleClick(index)} // Manejar clic 
+              onClick={() => handleClick(index)} // Manejar clic
             >
-              <a>{category}</a>
+              <Link to={category.path}>{category.name}</Link> {/* Cambiamos a Link */}
             </li>
           </div>
         ))}

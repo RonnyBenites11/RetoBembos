@@ -5,6 +5,11 @@ import { LuShoppingCart } from 'react-icons/lu';
 import { Fa0 } from 'react-icons/fa6';
 import { Cart } from '../Cart/Cart';
 import { ContenBg } from '../ContentBg/ContenBg';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+
+import Combo from '../Combos/Combo/Combo';
+
+import Menu from '../Menu/Menu';
 
 const Navigation = () => {
   const [visible, setVisible] = useState(false);
@@ -24,7 +29,7 @@ const Navigation = () => {
           <div className="navigation-content max-container">
             <div className="navigation-menu">
               <div className="nav-menu-item">
-                <a href="/menu">
+                <Link to="/menu" >
                   <img
                     src="https://www.bembos.com.pe/_nuxt/img/bmb_menu.1db9cff.svg"
                     alt="MENÚ"
@@ -32,19 +37,19 @@ const Navigation = () => {
                     height="26"
                   />
                   <span>MENÚ</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-menu-item">
-                <a href="/menu/combos">
+                <Link to="/combo">
                   <img src="https://www.bembos.com.pe/_nuxt/img/combo.e6f7c16.svg" alt="COMBOS" />
                   <span>COMBOS</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-menu-item hasSubs">
-                <a href="/promociones/delivery-hamburguesas">
+                <Link to="/promociones">
                   <img src="https://www.bembos.com.pe/_nuxt/img/bmb_promociones.b14af19.svg" alt="PROMOCIONES" />
                   <span>PROMOCIONES</span>
-                </a>
+                </Link>
                 {/* <ul className="hoversubs">
                   <li>
                     <a href="#">Promociones Personales</a>
@@ -61,16 +66,16 @@ const Navigation = () => {
                 </ul>*/}
               </div>
               <div className="nav-menu-item">
-                <a href="/menu/hamburguesas">
+                <Link to="/hamburguesas">
                   <img src="https://www.bembos.com.pe/_nuxt/img/bmb_hamburguesa.3449e24.svg" alt="HAMBURGUESAS" />
                   <span>HAMBURGUESAS</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-menu-item">
-                <a href="/beneficios">
+                <Link to="/beneficios">
                   <img src="https://www.bembos.com.pe/_nuxt/img/bmb_beneficios.f8fa7ff.svg" alt="BENEFICIOS" />
                   <span>BENEFICIOS</span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="navigation-cart">
@@ -104,7 +109,8 @@ const Navigation = () => {
       <ContenBg visible={visible} />
 
       <Cart visible={visible} onClose={closeCart} />
-
+        
+     
       {/* Vista móvil */}
       <div className="mobile-view">
         <div className="header">
@@ -135,6 +141,8 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      
+     
     </div>
   );
 };

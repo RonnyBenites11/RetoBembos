@@ -3,6 +3,7 @@ import './Header.css';
 import { BsTelephone } from 'react-icons/bs';
 import { SlArrowDown } from 'react-icons/sl';
 import Navigation from '../Navigation';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -14,7 +15,8 @@ const Header = () => {
         <div className="main-header">
           <div className="header-container">
             <div className="logo">
-              <img src="/public/img/Bembos_logo_2014_con_fondo-Photoroom (1).png" alt="Bembos Logo" className="logo" />
+              <Link to= "/"> <img src="/public/img/Bembos_logo_2014_con_fondo-Photoroom (1).png" alt="Bembos Logo" className="logo" /></Link>
+             
             </div>
             <div className="contact-info">
               <div className="contact-info-detail">

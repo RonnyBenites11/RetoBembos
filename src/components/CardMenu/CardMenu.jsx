@@ -14,9 +14,12 @@ export const CardMenu = forwardRef((props, ref) => {
     const readMenu = async () => {
       try {
         const { data } = await axios.get('http://localhost:3000/menu');
-        /* setMenuData(data);*/
-
-        setMenuData(data[0]?.tipos || []);
+        // Asegurarse de que el formato es correcto antes de asignar los datos
+        if (data && Array.isArray(data) && data[0]?.tipos) {
+          setMenuData(data[0].tipos);
+        } else {
+          console.error('Formato de datos inesperado');
+        }
       } catch (error) {
         console.log(error);
       }
@@ -32,9 +35,10 @@ export const CardMenu = forwardRef((props, ref) => {
         slidesPerGroup={1}
         centeredSlides={false}
         spaceBetween={30}
-        /*  pagination={{
-          type: 'fraction',
-        }}*/
+        pagination={{
+          type: 'fraction', // Si decides habilitar la paginación
+        }}
+        navigation={true} // Habilitar navegación si lo necesitas
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
@@ -55,25 +59,3 @@ export const CardMenu = forwardRef((props, ref) => {
     </div>
   );
 });
-{
-  /*<div className="card-menu-container">
-      {menuData.map((menu, index) => (
-        <div className="card" key={menu.id}> {}
-          <div className="card-img">
-            <img src={menu.img} alt={menu.nombre} /> {}
-          </div>
-          <div className="card-info">
-            <h3 className="card-name">{menu.nombre}</h3>
-            <button className="card-btn" onClick={() => (window.location.href = menu.link)}>
-              Ver Todos
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>*/
-}
-
-/*const menuBtns = document.querySelectorAll('.card-btn');
-      menuBtns.forEach((btn) => {
-        btn.addEventListener('click', (window.location.href = ${menu.link}));
-      });*/
