@@ -4,6 +4,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { CardPromociones } from '../CardPromociones/CardPromociones';
 import { CardComplemento } from '../CardComplemento/CardComplemento';
+import PreguntasFrecuentes from '../Combos/PreguntasFrecuentes';
 
 export const Promociones = () => {
   return (
@@ -34,6 +35,32 @@ export const Promociones = () => {
             <CardComplemento />
             <CardPromociones promoName={'cupones'} />
             <CardComplemento />
+            <PreguntasFrecuentes
+              isPromotion={true}
+              faqData={[
+                {
+                  question:
+                    '¿Las promociones de hamburguesas delivery online se pueden pagar presencialmente en mi domicilio?',
+                  answer:
+                    'crujiente sandwich de pollo Los puntos que se reciben por la compra del  varían entorno al tamaño de la misma, en proporción se otorga un punto por cada S/1. Conoce tus puntos desde la APP o ingresando en la Web.',
+                },
+                {
+                  question: '¿De qué están hechas la hamburguesa de pollo o hamburguesa broaster de Bembos?',
+                  answer:
+                    'Las hamburguesas de pollo están hechas de carne de pollo, junto con las más exquisitos ingredientes peruanos. ¡Pídelo por Online delivery!,',
+                },
+                {
+                  question: '¿Los sandwiches de pollo a la parrilla de Bembos están acompañados de papas fritas?',
+                  answer:
+                    'Sí, el Sandwich de pollo a la parrillaincluye distintos acompañamientos, podrás incluir: Huevo, Papas extras, Plátano, queso y Tocino. También puedes pedirlo únicamente solo sin acompañamiento.',
+                },
+                {
+                  question: '¿Qué adicionales tienen los sandwich de pollo a la parrilla de Bembos?',
+                  answer:
+                    'Los adicionales que tienen las hamburguesas de pollo varían según elección del usuario. Entre estas tenemos añadir: Plátano, huevo, queso, tocino y papas al hilo extras. También añadir las más exquisitas salsas peruanas.',
+                },
+              ]}
+            />
           </div>
         </div>
       </div>
