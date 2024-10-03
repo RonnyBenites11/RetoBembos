@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 import './Carrusel.css';
-import "slick-carousel/slick/slick.css"; // Importa los estilos base de slick
-import "slick-carousel/slick/slick-theme.css"; // Importa los estilos del tema de slick
+import 'slick-carousel/slick/slick.css'; // Importa los estilos base de slick
+import 'slick-carousel/slick/slick-theme.css'; // Importa los estilos del tema de slick
 
 const Carrusel = ({ images }) => {
   const settings = {
@@ -31,7 +31,7 @@ const Carrusel = ({ images }) => {
     <div className="carousel-container">
       <Slider {...settings}>
         {imagesToDisplay.map((image, index) => (
-          <div key={index}>
+          <div key={index} className="carousel-img">
             <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
           </div>
         ))}

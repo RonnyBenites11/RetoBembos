@@ -228,8 +228,12 @@
 }
 
 /*  Responsive  */
-@media (max-width: 1200px) {
+@media (max-width: 480px) {
   .navigation-content {
     padding: 0 1rem;
+  }
+
+  .desktop-view {
+    display: none;
   }
 }
