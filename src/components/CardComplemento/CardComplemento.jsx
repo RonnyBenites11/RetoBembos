@@ -1,42 +1,70 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, forwardRef } from 'react';
 import './CardComplemento.css';
 import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, HashNavigation } from 'swiper/modules';
 
-export const CardComplemento = () => {
+export const CardComplemento = forwardRef((props, ref) => {
   const [complementData, setComplement] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const readComplement = async () => {
+      setLoading(true);
       try {
         const { data } = await axios.get('http://localhost:3000/complementos');
         setComplement(data[0].tipos); // Accedemos al array "tipos" dentro de los datos
       } catch (error) {
+        setError('Failed to load data');
         console.log(error);
+      } finally {
+        setLoading(false);n
       }
     };
     readComplement();
   }, []);
 
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
   return (
     <div className="complement-container">
       <h3 className="complement-title">Complementos:</h3>
-      <div className="complement-products">
+      <Swiper
+        ref={ref}
+        slidesPerView={4}
+        slidesPerGroup={1}
+        spaceBetween={60}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        hashNavigation={{
+          watchState: true,
+        }}
+        modules={[Pagination, Navigation, HashNavigation]}
+        className="mySwiper"
+      >
         {complementData.map((complement, index) => (
-          <div className="complement-card" key={index}>
-            <div className="complement-img">
-              <img src={complement.img} alt={complement.nombre} />
+          <SwiperSlide key={index} data-hash={`slide${index + 1}`}>
+            <div className="complement-card">
+              <div className="complement-img">
+                <img src={complement.img} alt={complement.nombre} />
+              </div>
+              <div className="complement-info">
+                <span className="complement-name">{complement.nombre}</span>
+                <span className="complement-price">S/. {complement.precio}</span>
+                <button className="promos-info-btn">Ver más</button>
+              </div>
             </div>
-            <div className="complement-info">
-              <span className="complement-name">{complement.nombre}</span>
-              {/* Verificación de precio antes de usar toFixed */}
-              <span className="complement-price">
-                S/. {complement.precio ? complement.precio.toFixed(2) : 'N/A'}
-              </span>
-              <button className="promos-info-btn">Ver más</button>
-            </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
-};
+});

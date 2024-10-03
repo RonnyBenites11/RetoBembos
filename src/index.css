@@ -79,3 +79,9 @@ a {
 ::-webkit-scrollbar-track {
   background: #f0f0f0;
 }
+
+@media (max-width: 480px) {
+  html {
+    max-width: 480px;
+  }
+}
