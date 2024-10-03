@@ -19,10 +19,10 @@ import Producto from './components/VerMas/Producto/Producto.jsx';
 
 
 
-   createRoot(document.getElementById('root')).render(<App />);
+   // createRoot(document.getElementById('root')).render(<App />);
 /*createRoot(document.getElementById('root')).render(<Menu />);*/
 // createRoot(document.getElementById('root')).render(<Combos />);
-//   createRoot(document.getElementById('root')).render(<Producto tipoProducto="helados"  />);
+  createRoot(document.getElementById('root')).render(<Producto tipoProducto="loncheritas"  />);
 // createRoot(document.getElementById('root')).render(<Burguer />);
 // createRoot(document.getElementById('root')).render(<Pollo />);
 // createRoot(document.getElementById('root')).render(<Bebidas />);
