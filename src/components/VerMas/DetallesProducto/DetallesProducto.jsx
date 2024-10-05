@@ -54,9 +54,20 @@ const DetallesProducto = ({ selectedTipo, productoData }) => {
             <p>No hay preguntas disponibles para este producto.</p>
           )}
         </div>
-        
       </div>
-      
+      <div className="producto-footer">
+        <div className="producto-footer-container">
+          <div className="footer-count">
+            <span className="product-count">Cantidad</span>
+            <div className="footer-count-btns">
+              <span className="product-minus">-</span>
+              <span className="product-number">1</span>
+              <span className="product-plus">+</span>
+            </div>
+          </div>
+          <button className="footer-btn-add">Agregar S/. 30.80</button>
+        </div>
+      </div>
     </div>
   );
 };
