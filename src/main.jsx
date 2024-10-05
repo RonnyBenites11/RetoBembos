@@ -26,7 +26,7 @@ import Producto from './components/VerMas/Producto/Producto.jsx';
 
 
 
-createRoot(document.getElementById('root')).render(<App />);
+ createRoot(document.getElementById('root')).render(<App />);
 /*createRoot(document.getElementById('root')).render(<Menu />);*/
 
 /*createRoot(document.getElementById('root')).render(<Combos />);*/
@@ -34,5 +34,6 @@ createRoot(document.getElementById('root')).render(<App />);
 /*createRoot(document.getElementById('root')).render(<Pollo />);*/
 /*createRoot(document.getElementById('root')).render(<Comb0s />);*/
 
-/*createRoot(document.getElementById('root')).render(<Producto tipoProducto="loncheritas" />);*/
+// createRoot(document.getElementById('root')).render(<Producto tipoProducto="loncheritas " />);
 /*createRoot(document.getElementById('root')).render(<Promociones />)*/
+// createRoot(document.getElementById('root')).render(<Producto tipoProducto="loncheritas" />);

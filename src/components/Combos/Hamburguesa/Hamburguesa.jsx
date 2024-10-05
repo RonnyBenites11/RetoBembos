@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Header';
 import Navigation from '../../Navigation';
 import NavigationSec from '../NavigationSec';
@@ -6,19 +6,24 @@ import CombosBembos from '../CombosBembos';
 import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
 import Footer from '../../Footer';
+import Producto from '../../VerMas/Producto/Producto';
 
 
 const Hamburguesa = () => {
+  const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
+
+  const handleTipoSelect = (tipo) => {
+    setSelectedTipo(tipo); // Actualiza el estado cuando se selecciona un producto
+  };
   return (
     <div>
       <Header className="fix" />
       <Navigation />
       <NavigationSec />
-      <CombosBembos
-        apiUrl="http://localhost:3000/hamburguesas"
-        title="Conoce nuestras irresistibles hamburguesas | BEMBOS"
-        info={
+      
           <section className="hamburguesas">
+          {!selectedTipo && <CombosBembos title="Descubre nuestras loncheras | BEMBOS" />}
+          <Producto tipoProducto="hamburguesas" onSelectTipo={handleTipoSelect} />
            <h1>Hamburguesas a la parrilla</h1>
             <div className="contenido">
               <div className="descripcion">
@@ -30,7 +35,13 @@ const Hamburguesa = () => {
                 </p>
               </div>
             </div>
-            <PreguntasFrecuentes
+            
+          </section>
+      
+      
+      {!selectedTipo && (
+        <> 
+      <PreguntasFrecuentes
             title="PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS "
             faqData={[
               {
@@ -51,14 +62,12 @@ const Hamburguesa = () => {
               }
     
             ]} />
-          </section>
-        }
-      />
-      <div className='span'></div> 
-      <AnuncioApp />
-      <Footer/>
+          <AnuncioApp />
+          <Footer />
+          
+        </>
+      )}
     </div>
   );
 };
-
 export default Hamburguesa;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Header';
 import Navigation from '../../Navigation';
 import NavigationSec from '../NavigationSec';
@@ -6,28 +6,50 @@ import CombosBembos from '../CombosBembos';
 import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
 import Footer from '../../Footer';
+import Producto from '../../VerMas/Producto/Producto';
 
 
 const Loncherita = () => {
+  const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
+
+  const handleTipoSelect = (tipo) => {
+    setSelectedTipo(tipo); // Actualiza el estado cuando se selecciona un producto
+  };
   return (
     <div>
       <Header className="fix" />
       <Navigation />
       <NavigationSec />
-      <CombosBembos
-        apiUrl="http://localhost:3000/loncheritas"
-        title="Descubre nuestras loncheras | BEMBOS"
-        info={
+     
+      
+          
           <section className="hamburguesas">
-           
+            {/* Condición para ocultar CombosBembos si hay un tipo seleccionado */}
+      {!selectedTipo && <CombosBembos title="Descubre nuestras loncheras | BEMBOS" />}
+      
+    
+
+      {/* Componente Producto con la lógica para seleccionar tipo */}
+      <Producto tipoProducto="loncheritas" onSelectTipo={handleTipoSelect} />
+
             <div className="contenido">
               <div className="descripcion">
+              
+              <h2>LONCHERITAS DE BEMBOS</h2>
                 <p>
                 Las loncheritas infantiles son una opción ideal para los más chicos. Puedes pedir tu loncherita Bembos con hamburguesa o nuggets, y te incluye papas fritas y bebida.
                 </p>
               </div>
             </div>
-            <PreguntasFrecuentes
+            
+           
+          </section>
+       
+      
+     
+      {!selectedTipo && (
+        <> 
+        <PreguntasFrecuentes className ="hamburguesas"
             title="PREGUNTAS FRECUENTES SOBRE LAS LONCHERITAS"
             faqData={[
           {
@@ -44,12 +66,11 @@ const Loncherita = () => {
           }
          
         ]} />
-          </section>
-        }
-      />
-      <div className='span'></div> 
-      <AnuncioApp />
-      <Footer/>
+          <AnuncioApp />
+          <Footer />
+          
+        </>
+      )}
     </div>
   );
 };

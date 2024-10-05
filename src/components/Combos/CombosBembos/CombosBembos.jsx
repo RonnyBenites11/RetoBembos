@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './CombosBembos.css';
+import { Link } from 'react-router-dom';
 
 const CombosBembos = ({ apiUrl, title, info }) => {
   const [items, setItems] = useState([]);
@@ -50,7 +51,7 @@ const CombosBembos = ({ apiUrl, title, info }) => {
                   <div className="terms">
                     <a href="/terms" className="terms-link">Términos y Condiciones</a>
                   </div>
-                  <button className="more-button">Ver más</button>
+                  <Link to="/producto"  className="more-button">Ver más</Link>
                 </div>
               </div>
             </div>

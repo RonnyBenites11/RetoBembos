@@ -22,6 +22,7 @@ import Complementos from './components/Combos/Complementos';
 import Bebidas from './components/Combos/Bebidas';
 import Helados from './components/Combos/Helados';
 import InkaChips from './components/Combos/Inkachips';
+import Producto from './components/VerMas/Producto/Producto.jsx';
 
 
 
@@ -46,9 +47,10 @@ const App = () => {
         <Route path="/bebidas" element={<Bebidas  />} />
         <Route path="/helados" element={<Helados  />} />
         <Route path="/inka-chips" element={<InkaChips  />} />
+        <Route path="/producto" element={<Producto  />} />
       </Routes>
       
-      
+    
     
     </BrowserRouter>
   );
