@@ -84,7 +84,7 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
             </div>
           </div>
           <button className="footer-btn-add" onClick={agregarAlCarrito}>
-            S/. {precioTotal.toFixed(2)}
+            Agregar S/. {precioTotal.toFixed(2)}
           </button>
         </div>
       </div>
