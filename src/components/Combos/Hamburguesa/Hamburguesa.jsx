@@ -39,7 +39,7 @@ const Hamburguesa = () => {
                
             /div>*/}
             <div className="descripcion">
-              <p className='descripcion-txt'>
+              <p className="descripcion-txt">
                 Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por
                 ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego
                 para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla

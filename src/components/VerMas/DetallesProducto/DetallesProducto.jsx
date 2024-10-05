@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Cart } from '../../Cart/Cart';
 
 const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
   const [cantidad, setCantidad] = useState(1);
@@ -19,6 +20,21 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
 
   const agregarAlCarrito = () => {
     abrirCarrito(selectedTipo, cantidad, precioTotal); // Se agrega el producto al carrito
+  };
+
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible((prevState) => !prevState);
+  };
+
+  const closeCart = () => {
+    setVisible(false);
+  };
+
+  const AgregarCarritoyToggle = () => {
+    /*agregarAlCarrito();*/
+    toggleVisibility();
   };
 
   return (
@@ -73,21 +89,28 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
           )}
         </div>
       </div>
+
       <div className="producto-footer">
         <div className="producto-footer-container">
           <div className="footer-count">
             <span className="product-count">Cantidad</span>
             <div className="footer-count-btns">
-              <span className="product-minus" onClick={disminuirCantidad}>-</span>
+              <span className="product-minus" onClick={disminuirCantidad}>
+                -
+              </span>
               <span className="product-number">{cantidad}</span>
-              <span className="product-plus" onClick={aumentarCantidad}>+</span>
+              <span className="product-plus" onClick={aumentarCantidad}>
+                +
+              </span>
             </div>
           </div>
-          <button className="footer-btn-add" onClick={agregarAlCarrito}>
-            S/. {precioTotal.toFixed(2)}
+          <button className="footer-btn-add" onClick={AgregarCarritoyToggle}>
+            Agregar S/. {precioTotal.toFixed(2)}
           </button>
         </div>
       </div>
+
+      <Cart visible={visible} onClose={closeCart} />
     </div>
   );
 };
