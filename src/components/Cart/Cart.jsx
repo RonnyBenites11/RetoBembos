@@ -102,7 +102,7 @@ export const Cart = ({ visible, onClose }) => {
                   <div className="cart-add-detail">
                     <div className="cart-add-txt">
                       <span className="cart-add-name">{addcomplement.nombre}</span>
-                      <span className="cart-add-price">S/. {addcomplement.precio}</span>
+                      <span className="cart-add-price">S/. {addcomplement.precio.toFixed(2)}</span>
                     </div>
                     <button className="cart-add-btn">Agregar</button>
                   </div>

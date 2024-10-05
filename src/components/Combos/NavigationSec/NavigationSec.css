@@ -1,16 +1,16 @@
 #menu-categories {
   position: fixed;
-  top: 220px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  width: 90%; 
-  max-width: 1800px; 
-  height: 40px; 
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1800px;
+  height: 40px;
   padding: 3px 0;
   border: 1px solid rgb(204, 204, 204);
   box-shadow: rgb(204, 204, 204) 0px 3px 10px;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   white-space: nowrap;
   background-color: rgb(255, 255, 255);
   transition: width 0.2s ease-in-out, top 0.2s ease-in-out, border-radius 0.2s ease-in-out;
@@ -19,20 +19,20 @@
   font-weight: 300;
   font-family: 'din1451';
   border-radius: 20px;
-  z-index: 1000; 
+  z-index: 1;
 }
 
 #menu-categories.scrolled {
-  width: 100%; 
-  top: 200px; 
-  border-radius: 0; 
+  width: 100%;
+  top: 200px;
+  border-radius: 0;
 }
 
 #menu-categories div {
   margin: 0 5px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 #menu-categories li {
@@ -47,7 +47,7 @@
   color: rgb(33, 56, 139);
   border-radius: 30px;
   height: 30px;
-  margin-top: 5px; 
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
