@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CombosBembos from '../CombosBembos';
 import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
@@ -7,19 +7,37 @@ import Navigation from '../../Navigation';
 import NavigationSec from '../NavigationSec';
 import './Pollo.css';
 import Footer from '../../Footer';
+import Producto from '../../VerMas/Producto/Producto';
 
 const Pollo = () => {
+  const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
+
+  const handleTipoSelect = (tipo) => {
+    setSelectedTipo(tipo); // Actualiza el estado cuando se selecciona un producto
+  };
   return (
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
-      <CombosBembos
-        apiUrl="http://localhost:3000/pollo"
-        title="Descubre nuestro irresistible menú de pollo | BEMBOS"
-        info={
+      <Navigation />
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
+      
+        
+        
           <section className="hamburguesas">
-            <h2 className="titulo">SÁNDWICHES Y HAMBURGUESAS DE POLLO</h2>
+          {!selectedTipo && <CombosBembos title="Descubre nuestro irresistible menú de pollo | BEMBOS" />}
+          <Producto tipoProducto="pollo" onSelectTipo={handleTipoSelect} />
+            
+          </section>
+     
+      {!selectedTipo && (
+        <> 
+      <h2 className="titulo">SÁNDWICHES Y HAMBURGUESAS DE POLLO</h2>
             <div className="contenido">
               <div className="descripcion">
                 <p>
@@ -47,12 +65,11 @@ const Pollo = () => {
             answer: 'Los adicionales que tienen las hamburguesas de pollo varían según elección del usuario. Entre estas tenemos añadir: Plátano, huevo, queso, tocino y papas al hilo extras. También añadir las más exquisitas salsas peruanas.',
           }
         ]} />
-          </section>
-        }
-      />
-      <div className='span'></div> 
-      <AnuncioApp />
-      <Footer/>
+       <AnuncioApp />
+          <Footer />
+          
+        </>
+      )}
     </div>
   );
 };

@@ -19,12 +19,24 @@ const Hamburguesa = () => {
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
       
           <section className="hamburguesas">
           {!selectedTipo && <CombosBembos title="Descubre nuestras loncheras | BEMBOS" />}
           <Producto tipoProducto="hamburguesas" onSelectTipo={handleTipoSelect} />
-           <h1>Hamburguesas a la parrilla</h1>
+          
+            
+          </section>
+      
+      
+      {!selectedTipo && (
+        <> 
+         <h1>Hamburguesas a la parrilla</h1>
             <div className="contenido">
               <div className="descripcion">
                 <p>
@@ -35,12 +47,6 @@ const Hamburguesa = () => {
                 </p>
               </div>
             </div>
-            
-          </section>
-      
-      
-      {!selectedTipo && (
-        <> 
       <PreguntasFrecuentes
             title="PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS "
             faqData={[

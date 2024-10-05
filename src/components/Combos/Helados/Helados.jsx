@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CombosBembos from '../CombosBembos';
 import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
@@ -7,29 +7,51 @@ import Navigation from '../../Navigation';
 import NavigationSec from '../NavigationSec';
 
 import Footer from '../../Footer';
+import Producto from '../../VerMas/Producto/Producto';
 
 const Helados = () => {
+  const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
+
+  const handleTipoSelect = (tipo) => {
+    setSelectedTipo(tipo); // Actualiza el estado cuando se selecciona un producto
+  };
   return (
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
-      <CombosBembos
-        apiUrl="http://localhost:3000/helados"
-        title="Deliciosos helados para ti | BEMBOS"
-        info={
-          <section className="hamburguesas">
-            <h2 className="titulo">POSTRES HELADOS</h2>
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
+      
+      <section className="hamburguesas">
+            {/* Condición para ocultar CombosBembos si hay un tipo seleccionado */}
+      {!selectedTipo && <CombosBembos title="Deliciosos helados para ti | BEMBOS" />}
+        
+        
+      <Producto tipoProducto="helados" onSelectTipo={handleTipoSelect} />
+           
             <div className="contenido">
               <div className="descripcion">
-                <p>
+              
+                
+              </div>
+            </div>
+            </section>
+           
+          
+            {!selectedTipo && (
+        <> 
+         <h2 className="titulo">POSTRES HELADOS</h2>
+      
+      <p>
                 Cualquier momento es ideal para un postre helado. Conoce las variedades que tenemos en Bembos.
                  Distintos sabores de helados, salsas y topping para que disfrutes. 
                 ¡Puedes elegir el tuyo, pedirlo online y recibirlo en tu hogar!
                 </p>
-              </div>
-            </div>
-            <PreguntasFrecuentes faqData={[
+      <PreguntasFrecuentes faqData={[
           {
             question: '¿Qué adicionales puedo agregarle a mi helado Bembos?',
             answer: 'Podrás añadir hasta 9 toppings dulces, de chocolate o maní.  Elige el mejor complemente para tu helado Mini Princesa y Choco Vainilla.',
@@ -44,14 +66,13 @@ const Helados = () => {
           }
          
         ]} />
-          </section>
-        }
-      />
-      <div className='span'></div> 
-      <AnuncioApp />
-      <Footer/>
-    </div>
-  );
+        <AnuncioApp />
+        <Footer />
+        
+      </>
+    )}
+  </div>
+);
 };
 
 export default Helados;
