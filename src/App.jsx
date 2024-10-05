@@ -23,9 +23,9 @@ import Helados from './components/Combos/Helados';
 import InkaChips from './components/Combos/Inkachips';
 import Producto from './components/VerMas/Producto/Producto.jsx';
 import DetallesProducto from './components/VerMas/DetallesProducto/DetallesProducto.jsx';
-
+import Detalles from './components/Detalles/Detalles.jsx';
 // Componente para obtener el producto basado en el ID
-const DetallesProductoWrapper = ({ abrirCarrito }) => {
+const Detallesw = ({ abrirCarrito }) => {
   const { id } = useParams(); // Obtiene el ID del producto de la URL
   const [productoData, setProductoData] = useState(null); // Estado para los datos del producto
 
@@ -80,7 +80,7 @@ const App = () => {
         <Route path="/helados" element={<Helados />} />
         <Route path="/inka-chips" element={<InkaChips />} />
         <Route path="/producto" element={<Producto />} />
-        <Route path="/producto/:id" element={<DetallesProductoWrapper abrirCarrito={abrirCarrito} />} />
+        <Route path="/producto/:id" element={<Detallesw abrirCarrito={abrirCarrito} />} />
       </Routes>
     </BrowserRouter>
   );
