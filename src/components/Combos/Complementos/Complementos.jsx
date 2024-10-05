@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Header';
 import Navigation from '../../Navigation';
 import NavigationSec from '../NavigationSec';
@@ -6,22 +6,38 @@ import CombosBembos from '../CombosBembos';
 import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
 import Footer from '../../Footer';
+import Producto from '../../VerMas/Producto/Producto';
 
 
 const Complementos = () => {
+  const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
+
+  const handleTipoSelect = (tipo) => {
+    setSelectedTipo(tipo); // Actualiza el estado cuando se selecciona un producto
+  };
   return (
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
-      <CombosBembos
-        apiUrl="http://localhost:3000/complementos"
-        title="Conoce nuestros deliciosos complementos | BEMBOS"
-        info={
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
+      
+        
+       
           <section className="hamburguesas">
-           
+          {!selectedTipo && <CombosBembos title="Conoce nuestros deliciosos complementos | BEMBOS" />}
+          <Producto tipoProducto="complementos" onSelectTipo={handleTipoSelect} />
             
-            <PreguntasFrecuentes
+           
+          </section>
+       
+          {!selectedTipo && (
+        <> 
+      <PreguntasFrecuentes
             title="PREGUNTAS FRECUENTES SOBRE NUESTROS COMPLEMENTOS"
             faqData={[
           {
@@ -42,12 +58,11 @@ const Complementos = () => {
           }
          
         ]} />
-          </section>
-        }
-      />
-      <div className='span'></div> 
-      <AnuncioApp />
-      <Footer/>
+       <AnuncioApp />
+          <Footer />
+          
+        </>
+      )}
     </div>
   );
 };

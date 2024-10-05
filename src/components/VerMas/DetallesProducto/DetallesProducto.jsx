@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DetallesProducto = ({ selectedTipo, productoData }) => {
   return (
@@ -6,8 +7,8 @@ const DetallesProducto = ({ selectedTipo, productoData }) => {
       <div className="producto-container">
         <div className="producto-left-container">
           <div className="producto-left-route">
-            <a href="#">Inicio</a> &gt;
-            <a href="#">Menu</a> &gt;
+            <Link to="/">Inicio</Link> &gt;
+            <Link to="/menu">Menu</Link> &gt;
             <a href="#">{selectedTipo.nombre}</a>
           </div>
           <div className="producto-left-image">
