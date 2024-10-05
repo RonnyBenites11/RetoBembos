@@ -7,6 +7,7 @@ import PreguntasFrecuentes from '../PreguntasFrecuentes';
 import AnuncioApp from '../AnuncioApp';
 import Footer from '../../Footer';
 import Producto from '../../VerMas/Producto/Producto';
+import './Hamburguesa.css';
 
 const Hamburguesa = () => {
   const [selectedTipo, setSelectedTipo] = useState(null); // Estado para controlar si hay un tipo seleccionado
@@ -32,10 +33,13 @@ const Hamburguesa = () => {
 
       {!selectedTipo && (
         <>
-          <h1>Hamburguesas a la parrilla</h1>
-          <div className="contenido">
+          <div className="producto-description">
+            <h1 className="titulo">Hamburguesas a la parrilla</h1>
+            {/*  <div className="contenido">
+               
+            /div>*/}
             <div className="descripcion">
-              <p>
+              <p className='descripcion-txt'>
                 Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por
                 ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego
                 para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla
@@ -44,6 +48,7 @@ const Hamburguesa = () => {
               </p>
             </div>
           </div>
+
           <PreguntasFrecuentes
             title="PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS "
             faqData={[

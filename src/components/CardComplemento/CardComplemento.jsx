@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, forwardRef } from 'react';
 import './CardComplemento.css';
 import axios from 'axios';
@@ -23,7 +22,8 @@ export const CardComplemento = forwardRef((props, ref) => {
         setError('Failed to load data');
         console.log(error);
       } finally {
-        setLoading(false);n
+        setLoading(false);
+        n;
       }
     };
     readComplement();
@@ -58,7 +58,7 @@ export const CardComplemento = forwardRef((props, ref) => {
               </div>
               <div className="complement-info">
                 <span className="complement-name">{complement.nombre}</span>
-                <span className="complement-price">S/. {complement.precio}</span>
+                <span className="complement-price">S/. {complement.precio.toFixed(2)}</span>
                 <button className="promos-info-btn">Ver más</button>
               </div>
             </div>

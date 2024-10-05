@@ -8,6 +8,7 @@
 .pedido-body {
   width: 1014px;
   margin: 0 auto;
+  padding-bottom: 1.5rem;
 }
 
 .pedido-title {
@@ -21,7 +22,8 @@
 .tipos-container {
   display: grid;
   /*grid-template-columns: repeat(3, 277px);*/
-  grid-template-columns: repeat(3, auto);
+  /*grid-template-columns: repeat(3, auto);*/
+  grid-template-columns: repeat(3, 297px);
   gap: 5rem;
   width: 994px;
   margin: 0 auto;
@@ -103,7 +105,7 @@
   position: fixed;
   top: 200px;
   /*  background: rgba(255, 0, 0, 0.5);*/
-  z-index: 50;
+  z-index: 2;
 }
 
 .producto-left-route {
@@ -132,6 +134,7 @@
 .product-right-container {
   padding-top: 20rem;
   padding-left: 400px;
+  padding-bottom: 25rem; /*Final*/
 }
 
 .product-right-txt {
@@ -185,16 +188,19 @@
 .choose-img {
   width: 20px;
   height: 20px;
+  display: none; /*Esconder*/
 }
 
 .product-choose-chips {
-  display: flex;
+  /*display: flex;*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem 0 3rem 0;
 }
 
 .combo-card {
-  width: 132px;
+  /*width: 132px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,6 +242,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 1;
 }
 
 .producto-footer-container {

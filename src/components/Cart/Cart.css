@@ -171,6 +171,7 @@
 }
 
 .icon-delete {
+  cursor: pointer;
   height: 20px;
   width: 20px;
 }
