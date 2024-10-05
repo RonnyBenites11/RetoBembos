@@ -7,21 +7,17 @@ import CombosBembos from './CombosBembos';
 import Hamburguesa from './Hamburguesa';
 import Combo from './Combo/Combo';
 
-
 const Combos = () => {
   return (
     <div className="app">
       <Header className="fix" />
       <Navigation />
       <NavigationSec />
-      <Combo/>
-      
-      
+      <Combo />
 
-{
-      <div className='span'></div> }
+      {<div className="span"></div>}
 
-      { <Footer /> }
+      {<Footer />}
     </div>
   );
 };

@@ -24,34 +24,23 @@ import Helados from './components/Combos/Helados';
 import InkaChips from './components/Combos/Inkachips';
 import Producto from './components/VerMas/Producto/Producto.jsx';
 
-
-
-
-
-
 const App = () => {
   return (
     <BrowserRouter className="app">
-      <Header/>
-       <Navigation />
-      
       <Routes>
-      <Route path="/" element={<Principal />} />
+        <Route path="/" element={<Principal />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/combo" element={<Combo />} />
-        <Route path="/promociones" element={<Promociones  />} />
-        <Route path="/hamburguesas" element={<Hamburguesa  />} />
-        <Route path="/pollo" element={<Pollo  />} />
-        <Route path="/loncheritas" element={<Loncherita  />} />
-        <Route path="/complementos" element={<Complementos  />} />
-        <Route path="/bebidas" element={<Bebidas  />} />
-        <Route path="/helados" element={<Helados  />} />
-        <Route path="/inka-chips" element={<InkaChips  />} />
-        <Route path="/producto" element={<Producto  />} />
+        <Route path="/promociones" element={<Promociones />} />
+        <Route path="/hamburguesas" element={<Hamburguesa />} />
+        <Route path="/pollo" element={<Pollo />} />
+        <Route path="/loncheritas" element={<Loncherita />} />
+        <Route path="/complementos" element={<Complementos />} />
+        <Route path="/bebidas" element={<Bebidas />} />
+        <Route path="/helados" element={<Helados />} />
+        <Route path="/inka-chips" element={<InkaChips />} />
+        <Route path="/producto" element={<Producto />} />
       </Routes>
-      
-    
-    
     </BrowserRouter>
   );
 };

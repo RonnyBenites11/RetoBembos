@@ -39,7 +39,6 @@ const Producto = ({ tipoProducto, onSelectTipo }) => {
 
   return (
     <div>
-      <Header />
       <div className="pedidoContainer">
         <div className="pedido-body">
           {!selectedTipo ? (
@@ -53,8 +52,12 @@ const Producto = ({ tipoProducto, onSelectTipo }) => {
                   <div className="tipo-item-info">
                     <p className="tipo-item-name">{tipo.nombre}</p>
                     <span className="tipo-item-price">S/. {tipo.precio.toFixed(2)}</span>
-                    <a href="#" className="tipo-item-terms">Términos y Condiciones</a>
-                    <button className="tipo-item-btn" onClick={() => handleTipoClick(tipo)}>Ver más</button>
+                    <a href="#" className="tipo-item-terms">
+                      Términos y Condiciones
+                    </a>
+                    <button className="tipo-item-btn" onClick={() => handleTipoClick(tipo)}>
+                      Ver más
+                    </button>
                   </div>
                 </div>
               ))}

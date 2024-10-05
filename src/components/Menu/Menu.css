@@ -28,14 +28,14 @@
 .menu-container {
   box-sizing: border-box;
   margin: 0px 50px;
-  margin-top: 90px;
+  /*margin-top: 90px;*/
   width: 1045px;
-  padding: 10px;
-  background: #fff;
+  /*padding: 10px;*/
+  /*background: #fff;*/
   border-radius: 10px;
-  display: flex;
+  /*display: flex;*/
   color: #000;
-}
+} 
 
 .menu-info {
   width: 25%;
@@ -107,3 +107,5 @@
   unicode-bidi: isolate;
   border-bottom: black solid 1px;
 }
+
+

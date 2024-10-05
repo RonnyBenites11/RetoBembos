@@ -1,37 +1,38 @@
 .hamburguesas {
-    box-sizing: border-box;
-    margin: 10px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    font-family: din1451;
-  }
-  
-  .titulo {
-    margin: 15px 0;
-    text-transform: uppercase;
-    color: rgb(33, 56, 139);
-    font-size: 28px;
-  }
-  
-  .contenido {
-    margin: 0 10px 10px;
-    font-size: 14px;
-    font-family: Kulturista;
-    padding: 10px 0;
-  }
-  
-  .descripcion {
-    overflow: hidden;
-    text-align: left;
-  }
-  
-  .leer-mas {
-    text-align: right;
-  }
-  
-  .link {
-    color: rgb(33, 56, 139);
-    text-decoration: none;
-  }
-  
+  width: 1114px;
+  box-sizing: border-box;
+  /*  margin: 10px;*/
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family: din1451;
+  margin: 0 auto;
+}
+
+.titulo {
+  margin: 15px 0;
+  text-transform: uppercase;
+  color: rgb(33, 56, 139);
+  font-size: 28px;
+}
+
+.contenido {
+  margin: 0 10px 10px;
+  font-size: 14px;
+  font-family: Kulturista;
+  padding: 10px 0;
+}
+
+.descripcion {
+  overflow: hidden;
+  text-align: left;
+}
+
+.leer-mas {
+  text-align: right;
+}
+
+.link {
+  color: rgb(33, 56, 139);
+  text-decoration: none;
+}
