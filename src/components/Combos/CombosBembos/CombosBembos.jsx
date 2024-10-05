@@ -26,7 +26,7 @@ const CombosBembos = ({ apiUrl, title, info }) => {
   }, [apiUrl]);
 
   return (
-    <div className='menu-container'>
+    <div className='combo-menu-container'>
       <div className="detail-info">
         <h1>{title}</h1>
         <div className="menu-items">
