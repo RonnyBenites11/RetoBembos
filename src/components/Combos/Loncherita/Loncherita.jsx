@@ -19,7 +19,12 @@ const Loncherita = () => {
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
      
       
           
@@ -32,15 +37,7 @@ const Loncherita = () => {
       {/* Componente Producto con la lógica para seleccionar tipo */}
       <Producto tipoProducto="loncheritas" onSelectTipo={handleTipoSelect} />
 
-            <div className="contenido">
-              <div className="descripcion">
-              
-              <h2>LONCHERITAS DE BEMBOS</h2>
-                <p>
-                Las loncheritas infantiles son una opción ideal para los más chicos. Puedes pedir tu loncherita Bembos con hamburguesa o nuggets, y te incluye papas fritas y bebida.
-                </p>
-              </div>
-            </div>
+            
             
            
           </section>
@@ -49,6 +46,15 @@ const Loncherita = () => {
      
       {!selectedTipo && (
         <> 
+        <div className="contenido">
+              <div className="descripcion">
+              
+              <h2>LONCHERITAS DE BEMBOS</h2>
+                <p>
+                Las loncheritas infantiles son una opción ideal para los más chicos. Puedes pedir tu loncherita Bembos con hamburguesa o nuggets, y te incluye papas fritas y bebida.
+                </p>
+              </div>
+            </div>
         <PreguntasFrecuentes className ="hamburguesas"
             title="PREGUNTAS FRECUENTES SOBRE LAS LONCHERITAS"
             faqData={[

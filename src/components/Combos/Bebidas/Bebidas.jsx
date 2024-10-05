@@ -19,7 +19,12 @@ const Bebidas = () => {
     <div>
       <Header className="fix" />
       <Navigation />
-      <NavigationSec />
+      {!selectedTipo && (
+        <> 
+        <NavigationSec />
+        
+      </>
+    )}
       
       <section className="hamburguesas">
       {/* Condición para ocultar CombosBembos si hay un tipo seleccionado */}
