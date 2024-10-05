@@ -24,10 +24,21 @@ El siguiente proyecto tiene la finalidad de intentar replicar la página oficial
 
 - NodeJS
 
+- Hooks de React como:
+
+  - useState, useEffect
+
 - También se usaron algunas librerias como:
+
   - Swiper
+
     ```
       npm install swiper
+    ```
+
+  - Reack Slick
+    ```
+      npm install react-slick --save
     ```
 
 <b>Instalación</b>

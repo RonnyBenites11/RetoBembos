@@ -5,10 +5,23 @@ import Footer from '../Footer';
 import { CardPromociones } from '../CardPromociones/CardPromociones';
 import { CardComplemento } from '../CardComplemento/CardComplemento';
 import PreguntasFrecuentes from '../Combos/PreguntasFrecuentes';
+import { Cart } from '../Cart/Cart';
+import { useState } from 'react';
+import { ContenBg } from '../ContentBg/ContenBg';
 
 export const Promociones = () => {
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible((prevState) => !prevState);
+  };
+
+  const closeCart = () => {
+    setVisible(false);
+  };
   return (
     <div>
+      <ContenBg visible={visible} />
       <Header className="fix" />
       <div className="promociones-container">
         <div className="promo-navigation-links">
@@ -64,9 +77,11 @@ export const Promociones = () => {
           </div>
         </div>
       </div>
-      <div className="promos-cart">
+      <div className="promos-cart" onClick={toggleVisibility}>
         <button>Ver Carrito</button>
       </div>
+      <Cart visible={visible} onClose={closeCart} />
+
       <Footer />
     </div>
   );

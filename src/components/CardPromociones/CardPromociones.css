@@ -133,13 +133,13 @@
 
 .promos-products-personales,
 .promos-products-dos {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.promos-products-compartir {
+/*.promos-products-compartir {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .promos-products-cupones {
   grid-template-columns: repeat(4, 1fr);
-}
+}*/
