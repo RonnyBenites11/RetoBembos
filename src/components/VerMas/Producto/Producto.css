@@ -20,7 +20,8 @@
 
 .tipos-container {
   display: grid;
-  grid-template-columns: repeat(3, 277px);
+  /*grid-template-columns: repeat(3, 277px);*/
+  grid-template-columns: repeat(3, auto);
   gap: 5rem;
   width: 994px;
   margin: 0 auto;
@@ -129,7 +130,7 @@
 }
 
 .product-right-container {
-  padding-top: 6rem;
+  padding-top: 20rem;
   padding-left: 400px;
 }
 
@@ -215,11 +216,92 @@
   height: 55px;
 }
 
+.combo-img.active {
+  border: 3px solid #21388b;
+}
+
 .combo-title {
   font-size: 1.3rem;
   font-family: Arial;
   font-size: 100;
   text-align: center;
+}
+
+.producto-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #f6f7f8;
+  box-shadow: 0 0 6px -3px #000;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.producto-footer-container {
+  display: flex;
+  padding: 1.5rem 0;
+  gap: 10rem;
+}
+
+.footer-count {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-count span,
+.footer-btn-add {
+  font-family: 'kulturista';
+}
+
+.product-count {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-count-btns {
+  display: flex;
+  align-items: center;
+}
+
+.product-minus,
+.product-plus {
+  font-size: 2.7rem;
+  background-color: #dbe0e3;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.product-plus {
+  padding-top: 0.4rem;
+}
+
+.product-number {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  width: 4.4rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-btn-add {
+  background-color: #21388b;
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2.5rem;
+  padding: 1.3rem 4rem;
 }
 
 /*.product-description p{

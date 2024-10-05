@@ -18,60 +18,33 @@ const Hamburguesa = () => {
     <div>
       <Header className="fix" />
       <Navigation />
-<<<<<<< HEAD
-      <NavigationSec />
+
+      {!selectedTipo && (
+        <>
+          <NavigationSec />
+        </>
+      )}
 
       <section className="hamburguesas">
         {!selectedTipo && <CombosBembos title="Descubre nuestras loncheras | BEMBOS" />}
         <Producto tipoProducto="hamburguesas" onSelectTipo={handleTipoSelect} />
-        <h1>Hamburguesas a la parrilla</h1>
-        <div className="contenido">
-          <div className="descripcion">
-            <p>
-              Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por ello,
-              Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para
-              otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla con los
-              mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho
-              más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!.
-            </p>
-          </div>
-        </div>
       </section>
 
       {!selectedTipo && (
         <>
-          <PreguntasFrecuentes
-=======
-      {!selectedTipo && (
-        <> 
-        <NavigationSec />
-        
-      </>
-    )}
-      
-          <section className="hamburguesas">
-          {!selectedTipo && <CombosBembos title="Descubre nuestras loncheras | BEMBOS" />}
-          <Producto tipoProducto="hamburguesas" onSelectTipo={handleTipoSelect} />
-          
-            
-          </section>
-      
-      
-      {!selectedTipo && (
-        <> 
-         <h1>Hamburguesas a la parrilla</h1>
-            <div className="contenido">
-              <div className="descripcion">
-                <p>
-                Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. 
-                Por ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego para otorgarle la jugosidad perfecta que nos caracteriza. 
-                Combina tu hamburguesa de carne a la parrilla con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y mucho más.
-                 ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!.
-                </p>
-              </div>
+          <h1>Hamburguesas a la parrilla</h1>
+          <div className="contenido">
+            <div className="descripcion">
+              <p>
+                Sabemos que la preparación de la carne de una hamburguesa es una de las partes más importantes. Por
+                ello, Bembos te ofrece una técnica de cocción única en la que la mantenemos suspendida sobre el fuego
+                para otorgarle la jugosidad perfecta que nos caracteriza. Combina tu hamburguesa de carne a la parrilla
+                con los mejores ingredientes que hemos elegido para ti: tocino, plátano, tomate, lechuga, huevo, queso y
+                mucho más. ¡No esperes más y empieza a disfrutar de lo mejor del sabor peruano!.
+              </p>
             </div>
-      <PreguntasFrecuentes
->>>>>>> 475fc0b5a37bb0f52eacb2d1e7bbb7fd131d4b74
+          </div>
+          <PreguntasFrecuentes
             title="PREGUNTAS FRECUENTES SOBRE NUESTRAS HAMBURGUESAS "
             faqData={[
               {
