@@ -68,7 +68,6 @@ const Producto = ({ tipoProducto, onSelectTipo }) => {
           )}
         </div>
       </div>
-      
     </div>
   );
 };
