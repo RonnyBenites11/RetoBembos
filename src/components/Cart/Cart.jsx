@@ -33,6 +33,8 @@ export const Cart = ({ visible, onClose }) => {
 
   const totalAPagar = calcularSubtotal(); // Calcula el total a pagar
 
+  
+
   return (
     <div className={`cart-container ${visible ? 'visible' : ''}`}>
       <div className="cart-adress">
