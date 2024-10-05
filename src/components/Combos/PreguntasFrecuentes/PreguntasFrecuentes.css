@@ -2,13 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   background: #ffffff;
-  border-radius: 15px;
+  /*border-radius: 15px;*/
   padding: 20px 10px;
   font-weight: 300;
   color: #21388b;
   font-size: 13px;
   font-family: din1451;
   font-weight: 300;
+  width: 1114px;
+  margin: 0 auto;
 }
 
 .faq-header {
