@@ -22,7 +22,8 @@
 .tipos-container {
   display: grid;
   /*grid-template-columns: repeat(3, 277px);*/
-  grid-template-columns: repeat(3, auto);
+  /*grid-template-columns: repeat(3, auto);*/
+  grid-template-columns: repeat(3, 297px);
   gap: 5rem;
   width: 994px;
   margin: 0 auto;
@@ -133,6 +134,7 @@
 .product-right-container {
   padding-top: 20rem;
   padding-left: 400px;
+  padding-bottom: 25rem; /*Final*/
 }
 
 .product-right-txt {
@@ -186,16 +188,19 @@
 .choose-img {
   width: 20px;
   height: 20px;
+  display: none; /*Esconder*/
 }
 
 .product-choose-chips {
-  display: flex;
+  /*display: flex;*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem 0 3rem 0;
 }
 
 .combo-card {
-  width: 132px;
+  /*width: 132px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
