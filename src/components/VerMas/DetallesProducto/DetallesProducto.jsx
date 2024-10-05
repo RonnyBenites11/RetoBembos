@@ -1,7 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const DetallesProducto = ({ selectedTipo, productoData }) => {
+const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
+  const [cantidad, setCantidad] = useState(1);
+  const [precioTotal, setPrecioTotal] = useState(selectedTipo.precio);
+
+  useEffect(() => {
+    setPrecioTotal(selectedTipo.precio * cantidad);
+  }, [cantidad, selectedTipo.precio]);
+
+  const aumentarCantidad = () => {
+    setCantidad((prev) => prev + 1);
+  };
+
+  const disminuirCantidad = () => {
+    setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const agregarAlCarrito = () => {
+    abrirCarrito(selectedTipo, cantidad, precioTotal); // Se agrega el producto al carrito
+  };
+
   return (
     <div className="producto-info">
       <div className="producto-container">
@@ -23,7 +42,6 @@ const DetallesProducto = ({ selectedTipo, productoData }) => {
             </p>
           </div>
 
-          {/* Mostrar preguntas y combinaciones solo si existen */}
           {productoData.preguntas && productoData.preguntas.length > 0 ? (
             productoData.preguntas.map((pregunta) => (
               <div key={pregunta.nropregunta}>
@@ -60,12 +78,14 @@ const DetallesProducto = ({ selectedTipo, productoData }) => {
           <div className="footer-count">
             <span className="product-count">Cantidad</span>
             <div className="footer-count-btns">
-              <span className="product-minus">-</span>
-              <span className="product-number">1</span>
-              <span className="product-plus">+</span>
+              <span className="product-minus" onClick={disminuirCantidad}>-</span>
+              <span className="product-number">{cantidad}</span>
+              <span className="product-plus" onClick={aumentarCantidad}>+</span>
             </div>
           </div>
-          <button className="footer-btn-add">Agregar S/. 30.80</button>
+          <button className="footer-btn-add" onClick={agregarAlCarrito}>
+            S/. {precioTotal.toFixed(2)}
+          </button>
         </div>
       </div>
     </div>

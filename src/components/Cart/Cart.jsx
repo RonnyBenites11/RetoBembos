@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 
 export const Cart = ({ visible, onClose }) => {
   const [addComplementData, setAddComplement] = useState([]);
+  const [carrito, setCarrito] = useState([]); // Estado para manejar los productos en el carrito
 
   useEffect(() => {
     const readAddComplement = async () => {
@@ -20,6 +21,17 @@ export const Cart = ({ visible, onClose }) => {
     };
     readAddComplement();
   }, []);
+
+  // Función para agregar productos al carrito
+  const agregarAlCarrito = (producto, cantidad, precioTotal) => {
+    setCarrito((prevCarrito) => [...prevCarrito, { ...producto, cantidad, precioTotal }]);
+  };
+
+  const calcularSubtotal = () => {
+    return carrito.reduce((total, item) => total + item.precioTotal, 0);
+  };
+
+  const totalAPagar = calcularSubtotal(); // Calcula el total a pagar
 
   return (
     <div className={`cart-container ${visible ? 'visible' : ''}`}>
@@ -43,37 +55,40 @@ export const Cart = ({ visible, onClose }) => {
           </p>
         </div>
         <div className="cart-product">
-          <div className="cart-product-row">
-            <div className="cart-detail">
-              <div className="cart-detail-img">
-                <img
-                  src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-cheese-base.jpg"
-                  alt="product"
-                />
-              </div>
-              <div className="cart-detail-container">
-                <p className="cart-detail-product">03 x Hamburguesa Cheese</p>
-                <p className="cart-detail-price">S/. 59.70</p>
-              </div>
-            </div>
-            <div className="cart-btns">
-              <div className="cart-btns-top">
-                <div className="icon-delete">
-                  <img src="/src/assets/img/delete.svg" alt="delete" />
+          {carrito.length > 0 ? (
+            carrito.map((item, index) => (
+              <div className="cart-product-row" key={index}>
+                <div className="cart-detail">
+                  <div className="cart-detail-img">
+                    <img src={item.img} alt="product" />
+                  </div>
+                  <div className="cart-detail-container">
+                    <p className="cart-detail-product">{item.cantidad} x {item.nombre}</p>
+                    <p className="cart-detail-price">S/. {item.precioTotal.toFixed(2)}</p>
+                  </div>
                 </div>
-                <span>Leer más</span>
+                <div className="cart-btns">
+                  <div className="cart-btns-top">
+                    <div className="icon-delete">
+                      <img src="/src/assets/img/delete.svg" alt="delete" />
+                    </div>
+                    <span>Leer más</span>
+                  </div>
+                  <div className="cart-btns-bottom">
+                    <span className="cart-minus">-</span>
+                    <span className="cart-quantity">{item.cantidad}</span>
+                    <span className="cart-plus">+</span>
+                  </div>
+                </div>
               </div>
-              <div className="cart-btns-bottom">
-                <span className="cart-minus">-</span>
-                <span className="cart-quantity">3</span>
-                <span className="cart-plus">+</span>
-              </div>
-            </div>
-          </div>
+            ))
+          ) : (
+            <p>No hay productos en el carrito.</p>
+          )}
           <div className="cart-subtotal">
             <div className="cart-subtotal-txt">
               <span>Subtotal</span>
-              <span>S/ 54.70</span>
+              <span>S/. {totalAPagar.toFixed(2)}</span>
             </div>
             <div className="cart-subtotal-txt">
               <span>Delivery</span>
@@ -82,7 +97,7 @@ export const Cart = ({ visible, onClose }) => {
           </div>
           <div className="cart-total">
             <span>Total a pagar</span>
-            <span>S/ 61.20</span>
+            <span>S/. {(totalAPagar + 6.50).toFixed(2)}</span>
           </div>
         </div>
         <div className="cart-add-container">
@@ -96,27 +111,16 @@ export const Cart = ({ visible, onClose }) => {
             {addComplementData.map((addcomplement, index) => (
               <SwiperSlide key={index}>
                 <div className="cart-add-product">
-                  <div className="cart-add-img">
-                    <img src={addcomplement.img} alt="imagen" />
-                  </div>
-                  <div className="cart-add-detail">
-                    <div className="cart-add-txt">
-                      <span className="cart-add-name">{addcomplement.nombre}</span>
-                      <span className="cart-add-price">S/. {addcomplement.precio.toFixed(2)}</span>
-                    </div>
-                    <button className="cart-add-btn">Agregar</button>
-                  </div>
+                  <img src={addcomplement.img} alt="complement" />
+                  <p className="cart-add-product-title">{addcomplement.nombre}</p>
+                  <p className="cart-add-product-price">S/. {addcomplement.precio}</p>
+                  <button className="cart-add-btn" onClick={() => agregarAlCarrito(addcomplement, 1, addcomplement.precio)}>
+                    Agregar
+                  </button>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className={`cart-footer ${visible ? 'visible' : ''}`}>
-          <button className="cart-btn-pay cart-footer-btn">
-            <span className="cart-footer-quantity">1</span>Ir a pagar{' '}
-            <span className="cart-footer-price">S/. 61.20</span>
-          </button>
-          <button className="cart-btn-buy cart-footer-btn">Seguir comprando</button>
         </div>
       </div>
     </div>
