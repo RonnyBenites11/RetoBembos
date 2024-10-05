@@ -31,6 +31,11 @@
   padding-top: 4rem;
 }
 
+.products-container .swiper-button-next,
+.products-container .swiper-button-prev {
+  display: none;
+}
+
 /*.container-promocion {
   padding-top: 4rem;
 }

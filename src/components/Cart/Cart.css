@@ -139,6 +139,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .cart-detail-container {
@@ -317,10 +318,11 @@
   padding: 1rem 3rem;
   width: 35%;
   border-top: 2px solid #ccc;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem;*/
   transition: right 0.5s ease;
+  z-index: 1;
 }
 
 .cart-footer-btn {
@@ -363,10 +365,16 @@
   text-transform: uppercase;
   background-color: transparent;
   color: #d90f06;
+  margin-top: 0.8rem;
 }
 
 .cart-container.visible,
 .cart-footer.visible {
   display: block;
   right: 0;
+}
+
+.cart-add-container .swiper-button-prev,
+.cart-add-container .swiper-button-next {
+  display: none;
 }

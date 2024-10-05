@@ -35,9 +35,6 @@ export const CardMenu = forwardRef((props, ref) => {
         slidesPerGroup={1}
         centeredSlides={false}
         spaceBetween={30}
-        pagination={{
-          type: 'fraction', // Si decides habilitar la paginación
-        }}
         navigation={true} // Habilitar navegación si lo necesitas
         modules={[Pagination, Navigation]}
         className="mySwiper"

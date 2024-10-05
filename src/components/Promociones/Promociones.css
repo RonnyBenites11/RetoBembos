@@ -81,6 +81,7 @@
   width: 100%;
   background-color: #ffffff;
   text-align: center;
+  z-index: 5;
 }
 
 .promos-cart button {
