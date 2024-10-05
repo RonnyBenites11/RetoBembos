@@ -65,7 +65,9 @@ export const Cart = ({ visible, onClose }) => {
                     <img src={item.img} alt="product" />
                   </div>
                   <div className="cart-detail-container">
-                    <p className="cart-detail-product">{item.cantidad} x {item.nombre}</p>
+                    <p className="cart-detail-product">
+                      {item.cantidad} x {item.nombre}
+                    </p>
                     <p className="cart-detail-price">S/. {item.precioTotal.toFixed(2)}</p>
                   </div>
                 </div>
@@ -99,13 +101,13 @@ export const Cart = ({ visible, onClose }) => {
           </div>
           <div className="cart-total">
             <span>Total a pagar</span>
-            <span>S/. {(totalAPagar + 6.50).toFixed(2)}</span>
+            <span>S/. {(totalAPagar + 6.5).toFixed(2)}</span>
           </div>
         </div>
         <div className="cart-add-container">
           <p className="cart-add-title">También Agregar</p>
           <Swiper
-            spaceBetween={10}
+            spaceBetween={30}
             slidesPerView={2}
             navigation
             pagination={{ clickable: true }} // Si deseas paginación
@@ -114,15 +116,29 @@ export const Cart = ({ visible, onClose }) => {
               <SwiperSlide key={index}>
                 <div className="cart-add-product">
                   <img src={addcomplement.img} alt="complement" />
-                  <p className="cart-add-product-title">{addcomplement.nombre}</p>
-                  <p className="cart-add-product-price">S/. {addcomplement.precio}</p>
-                  <button className="cart-add-btn" onClick={() => agregarAlCarrito(addcomplement, 1, addcomplement.precio)}>
-                    Agregar
-                  </button>
+                  <div className="cart-add-detail">
+                    <div className="cart-add-txt">
+                      <p className="cart-add-product-title">{addcomplement.nombre}</p>
+                      <p className="cart-add-product-price">S/. {addcomplement.precio.toFixed(2)}</p>
+                    </div>
+                    <button
+                      className="cart-add-btn"
+                      onClick={() => agregarAlCarrito(addcomplement, 1, addcomplement.precio)}
+                    >
+                      Agregar
+                    </button>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className={`cart-footer ${visible ? 'visible' : ''}`}>
+          <button className="cart-btn-pay cart-footer-btn">
+            <span className="cart-footer-quantity">1</span>Ir a pagar{' '}
+            <span className="cart-footer-price">S/. 61.20</span>
+          </button>
+          <button className="cart-btn-buy cart-footer-btn">Seguir comprando</button>
         </div>
       </div>
     </div>

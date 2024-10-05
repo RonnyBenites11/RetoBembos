@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Cart } from '../../Cart/Cart';
 
 const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
   const [cantidad, setCantidad] = useState(1);
   const [precioTotal, setPrecioTotal] = useState(selectedTipo.precio);
+  const [activeComb, setActiveComb] = useState({}); // Estado para las combinaciones activas
 
   useEffect(() => {
     setPrecioTotal(selectedTipo.precio * cantidad);
@@ -19,6 +21,28 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
 
   const agregarAlCarrito = () => {
     abrirCarrito(selectedTipo, cantidad, precioTotal); // Se agrega el producto al carrito
+  };
+
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible((prevState) => !prevState);
+  };
+
+  const closeCart = () => {
+    setVisible(false);
+  };
+
+  const agregarCarritoYToggle = () => {
+    /*agregarAlCarrito(selectedTipo, cantidad, precioTotal);*/ // Agrega el producto al carrito
+    toggleVisibility(); // Cambia la visibilidad del carrito
+  };
+
+  const handleCombClick = (nropregunta, nrocomb) => {
+    setActiveComb((prev) => ({
+      ...prev,
+      [nropregunta]: prev[nropregunta] === nrocomb ? null : nrocomb, // Alternar la selección
+    }));
   };
 
   return (
@@ -55,8 +79,14 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
                 <div className="product-choose-chips">
                   {pregunta.combinaciones && pregunta.combinaciones.length > 0 ? (
                     pregunta.combinaciones.map((comb) => (
-                      <div key={comb.nrocomb} className="combo-card">
-                        <div className="combo-img">
+                      <div
+                        key={comb.nrocomb}
+                        className="combo-card"
+                        onClick={() => handleCombClick(pregunta.nropregunta, comb.nrocomb)}
+                      >
+                        <div
+                          className={`combo-img ${activeComb[pregunta.nropregunta] === comb.nrocomb ? 'active' : ''}`}
+                        >
                           <img src={comb.imgcomb} alt={comb.titulocomb} />
                         </div>
                         <p className="combo-title">{comb.titulocomb}</p>
@@ -73,21 +103,32 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
           )}
         </div>
       </div>
+
       <div className="producto-footer">
         <div className="producto-footer-container">
           <div className="footer-count">
             <span className="product-count">Cantidad</span>
             <div className="footer-count-btns">
-              <span className="product-minus" onClick={disminuirCantidad}>-</span>
+              <span className="product-minus" onClick={disminuirCantidad}>
+                -
+              </span>
               <span className="product-number">{cantidad}</span>
-              <span className="product-plus" onClick={aumentarCantidad}>+</span>
+              <span className="product-plus" onClick={aumentarCantidad}>
+                +
+              </span>
             </div>
           </div>
+<<<<<<< HEAD
           <button className="footer-btn-add" onClick={agregarAlCarrito}>
+=======
+          <button className="footer-btn-add" onClick={agregarCarritoYToggle}>
+>>>>>>> 10cc757ace7ef20fb849c40d32ce729260408271
             Agregar S/. {precioTotal.toFixed(2)}
           </button>
         </div>
       </div>
+
+      <Cart visible={visible} onClose={closeCart} />
     </div>
   );
 };

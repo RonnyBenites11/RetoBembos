@@ -1,8 +1,65 @@
-# React + Vite
+# Proyecto Final
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El siguiente proyecto tiene la finalidad de intentar replicar la página oficial de Bembos utiliziando HTML, CSS, JS y el framework React.
 
-Currently, two official plugins are available:
+<b>Se usaron las siguientes tecnologías:</b>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- VITE
+
+  ```
+  npm create vite
+  ```
+
+- NPM
+
+  ```
+  npm install
+  ```
+
+- Axios
+
+  ```
+  npm install axios
+  ```
+
+- NodeJS
+
+- Hooks de React como:
+
+  - useState, useEffect
+
+- También se usaron algunas librerias como:
+  - Swiper
+    ```
+      npm install swiper
+    ```
+
+<b>Instalación</b>
+
+1.  Clona el repositorio
+
+    ```
+    git clone https://github.com/RonnyBenites11/RetoBembos.git
+    ```
+
+2.  Instala los paquetes de NPM
+
+    ```
+      npm install
+    ```
+
+3.  Ejecuta el proyecto
+    - Iniciar el entorno de desarrollo
+      ```
+      npm run dev
+      ```
+    - Base de datos local
+      ```
+        npx json-server --watch db.json
+      ```
+
+<b>Integrantes</b>
+
+- Ronny Jhefferson Benites Rosado
+- Christian Raul Sotil Villagomez
+- Andrew Sebastian Maldonado Salazar

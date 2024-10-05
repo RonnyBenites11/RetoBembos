@@ -93,6 +93,11 @@
   border-radius: 25px;
   padding: 0.9rem 0;
   margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.tipo-item-btn:hover {
+  background-color: #2346bb;
 }
 
 .producto-container {
@@ -132,7 +137,8 @@
 }
 
 .product-right-container {
-  padding-top: 20rem;
+  /*padding-top: 20rem;*/
+  padding-top: 25rem;
   padding-left: 400px;
   padding-bottom: 25rem; /*Final*/
 }
@@ -159,7 +165,7 @@
   align-items: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid #707070;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .choose-title {
@@ -217,6 +223,10 @@
   border-radius: 10px;
 }
 
+.combo-img.active {
+  border: 3px solid #21388b;
+}
+
 .combo-img img {
   width: 55px;
   height: 55px;
@@ -241,7 +251,9 @@
   z-index: 55;
   display: flex;
   justify-content: center;
-  width: 100%;
+  /*width: 100%;*/
+  /*width: 1064px;*/
+  width: 1015px;
   z-index: 1;
 }
 

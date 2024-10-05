@@ -35,7 +35,7 @@
   border-radius: 10px;
   /*display: flex;*/
   color: #000;
-} 
+}
 
 .menu-info {
   width: 25%;
@@ -106,6 +106,5 @@
   font-weight: 400;
   unicode-bidi: isolate;
   border-bottom: black solid 1px;
+  margin-top: 10rem;
 }
-
-
