@@ -27,6 +27,33 @@ export const Cart = ({ visible, onClose }) => {
     setCarrito((prevCarrito) => [...prevCarrito, { ...producto, cantidad, precioTotal }]);
   };
 
+  // Función para aumentar la cantidad de un producto en el carrito
+  const aumentarCantidad = (index) => {
+    setCarrito((prevCarrito) => {
+      const nuevoCarrito = [...prevCarrito];
+      nuevoCarrito[index].cantidad += 1; // Aumentar cantidad
+      nuevoCarrito[index].precioTotal = nuevoCarrito[index].cantidad * nuevoCarrito[index].precio; // Actualizar precio total
+      return nuevoCarrito;
+    });
+  };
+
+  // Función para disminuir la cantidad de un producto en el carrito
+  const disminuirCantidad = (index) => {
+    setCarrito((prevCarrito) => {
+      const nuevoCarrito = [...prevCarrito];
+      if (nuevoCarrito[index].cantidad > 1) { // Evitar que la cantidad sea menor que 1
+        nuevoCarrito[index].cantidad -= 1; // Disminuir cantidad
+        nuevoCarrito[index].precioTotal = nuevoCarrito[index].cantidad * nuevoCarrito[index].precio; // Actualizar precio total
+      }
+      return nuevoCarrito;
+    });
+  };
+
+  // Función para eliminar un producto del carrito
+  const eliminarProducto = (index) => {
+    setCarrito((prevCarrito) => prevCarrito.filter((_, i) => i !== index)); // Filtrar el carrito
+  };
+
   const calcularSubtotal = () => {
     return carrito.reduce((total, item) => total + item.precioTotal, 0);
   };
@@ -71,15 +98,15 @@ export const Cart = ({ visible, onClose }) => {
                 </div>
                 <div className="cart-btns">
                   <div className="cart-btns-top">
-                    <div className="icon-delete">
+                    <div className="icon-delete" onClick={() => eliminarProducto(index)}>
                       <img src="/src/assets/img/delete.svg" alt="delete" />
                     </div>
                     <span>Leer más</span>
                   </div>
                   <div className="cart-btns-bottom">
-                    <span className="cart-minus">-</span>
+                    <span className="cart-minus" onClick={() => disminuirCantidad(index)}>-</span>
                     <span className="cart-quantity">{item.cantidad}</span>
-                    <span className="cart-plus">+</span>
+                    <span className="cart-plus" onClick={() => aumentarCantidad(index)}>+</span>
                   </div>
                 </div>
               </div>
@@ -133,8 +160,8 @@ export const Cart = ({ visible, onClose }) => {
         </div>
         <div className={`cart-footer ${visible ? 'visible' : ''}`}>
           <button className="cart-btn-pay cart-footer-btn">
-            <span className="cart-footer-quantity">1</span>Ir a pagar{' '}
-            <span className="cart-footer-price">S/. 61.20</span>
+            <span className="cart-footer-quantity">{carrito.length}</span>Ir a pagar{' '}
+            <span className="cart-footer-price">S/. {(totalAPagar + 6.5).toFixed(2)}</span>
           </button>
           <button className="cart-btn-buy cart-footer-btn">Seguir comprando</button>
         </div>

@@ -19,13 +19,18 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
   };
 
   const agregarAlCarrito = () => {
-    abrirCarrito(selectedTipo, cantidad, precioTotal); // Se agrega el producto al carrito
+    if (typeof abrirCarrito === 'function') {
+      abrirCarrito(selectedTipo, cantidad, precioTotal);
+    } else {
+      console.error("abrirCarrito no es una función");
+    }
   };
 
   const [visible, setVisible] = useState(false);
 
   const toggleVisibility = () => {
     setVisible((prevState) => !prevState);
+    
   };
 
   const closeCart = () => {
@@ -33,8 +38,11 @@ const DetallesProducto = ({ selectedTipo, productoData, abrirCarrito }) => {
   };
 
   const AgregarCarritoyToggle = () => {
-    /*agregarAlCarrito();*/
+  
+     // Agrega el producto al carrito
     toggleVisibility();
+    agregarAlCarrito();
+    console.log(agregarAlCarrito) // Muestra el carrito
   };
 
   return (
